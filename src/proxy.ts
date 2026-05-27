@@ -4,5 +4,6 @@ import { routing } from "./i18n/routing";
 export default createMiddleware(routing);
 
 export const config = {
-  matcher: "/((?!api|_next|_vercel|.*\\..*).*)",
+  // Incluir "/" explícitamente: el patrón solo con `.*` puede no matchear la raíz en edge.
+  matcher: ["/", "/((?!api|_next|_vercel|.*\\..*).*)"],
 };
