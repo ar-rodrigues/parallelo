@@ -1,0 +1,50 @@
+.body {
+  max-height: min(70vh, 520px);
+  overflow-y: auto;
+  padding-right: var(--spacing-xs);
+}
+
+.updated {
+  color: var(--p-muted);
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--spacing-lg);
+}
+
+.section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.section h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--p-green-dark);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.section p {
+  color: var(--p-slate);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--spacing-md);
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--p-green);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.linkButton:hover {
+  color: var(--p-green-dark);
+}

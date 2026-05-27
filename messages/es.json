@@ -1,0 +1,374 @@
+{
+  "Metadata": {
+    "title": "Parallelo | Cumplimiento Laboral, Auditorías VDA y Reclutamiento — Puebla, México",
+    "description": "Consultoría especializada en diagnóstico de cumplimiento laboral STPS, preparación para auditorías VDA 6.1/6.3/6.5 y reclutamiento masivo. Sede en Puebla, cobertura nacional."
+  },
+  "Header": {
+    "tagline": "Cumplimiento y Prevención",
+    "nav": {
+      "services": "Servicios",
+      "coverage": "Cobertura",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "cta": "Contacto",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú"
+  },
+  "Hero": {
+    "tag": "Cumplimiento · Calidad · Talento",
+    "titleBefore": "Diagnóstico de Cumplimiento Laboral, ",
+    "titleHighlight": "preparación VDA",
+    "titleAfter": " y Reclutamiento Especializado",
+    "subtitle": "Evita multas ante la STPS, prepara a tu empresa para auditorías VDA y contrata talento que fortalezca tu operación.",
+    "ctaPrimary": "Solicitar diagnóstico preventivo",
+    "ctaSecondary": "Conocer servicios",
+    "micro": {
+      "coverage": "Cobertura nacional",
+      "hq": "Sede en Puebla",
+      "sectors": "Industrial · Comercial · Servicios"
+    },
+    "stats": {
+      "experience": { "value": "30", "suffix": "+", "label": "Años de experiencia" },
+      "services": { "value": "3", "suffix": "", "label": "Servicios clave integrados" },
+      "coverage": { "value": "100", "suffix": "%", "label": "Cobertura nacional MX" }
+    }
+  },
+  "TrustBar": {
+    "items": {
+      "stps": "STPS",
+      "vda": "VDA 6.1 / 6.3 / 6.5",
+      "recruitment": "Reclutamiento Masivo",
+      "national": "República Mexicana"
+    }
+  },
+  "About": {
+    "label": "Consultoría Estratégica",
+    "titleBefore": "Aliado estratégico en ",
+    "titleHighlight": "cumplimiento, calidad",
+    "titleAfter": " y talento humano",
+    "paragraph1": "Creemos que la estabilidad y crecimiento de una empresa dependen de su capacidad para operar con cumplimiento y construir equipos sólidos. Por ello, nos posicionamos como aliado que ayuda a las organizaciones a prevenir riesgos, optimizar procesos y tomar decisiones más inteligentes.",
+    "paragraph2": "Con más de 30 años de experiencia, integramos soluciones de cumplimiento preventivo y reclutamiento estratégico para empresas industriales, comerciales y de servicios.",
+    "quote": "No es solo cumplimiento, calidad o reclutamiento. Fortalecemos a tu negocio desde dentro.",
+    "metrics": {
+      "years": { "display": "30+", "label": "Años de experiencia en el sector" },
+      "services": { "display": "3", "label": "Frentes críticos integrados" },
+      "coverage": { "display": "Nacional", "label": "Cobertura en toda la República" },
+      "hq": { "display": "Puebla", "label": "Sede principal de operaciones" }
+    }
+  },
+  "Impact": {
+    "label": "El Costo del Incumplimiento",
+    "titleBefore": "Una inspección laboral puede costarte",
+    "titleHighlight": "mucho más que una multa",
+    "subtitle": "Muchas empresas descubren sus incumplimientos cuando ya es demasiado tarde: expedientes incompletos, NOMs mal aplicadas o procesos laborales sin respaldo.",
+    "cards": {
+      "inspections": {
+        "amount": "+43,000",
+        "label": "Inspecciones laborales practicadas ene–nov 2025",
+        "source": "Fuente: STPS Transparencia"
+      },
+      "points": {
+        "amount": "270–490",
+        "label": "Puntos de verificación en una auditoría laboral"
+      },
+      "min": {
+        "amount": "$5,657",
+        "label": "Multa mínima por incumplimiento básico (MXN)"
+      },
+      "max": {
+        "amount": "$5.4M",
+        "label": "Multa máxima posible por incumplimiento grave (MXN)"
+      }
+    },
+    "multiplier": {
+      "title": "Multiplicador",
+      "desc": "Las multas se multiplican por cada trabajador afectado. Hasta las empresas con mejores estándares pueden ser sancionadas."
+    },
+    "quote": "Una sola NOM mal aplicada puede costarte más que todo un servicio anual de consultoría preventiva."
+  },
+  "Services": {
+    "label": "Tres Servicios. Un Aliado.",
+    "title": "Nuestros servicios especializados",
+    "subtitle": "Selecciona el servicio para conocer más detalle.",
+    "tabs": {
+      "stps": "Cumplimiento STPS",
+      "vda": "Auditorías VDA",
+      "rec": "Reclutamiento"
+    },
+    "stps": {
+      "badges": {
+        "0": "STPS",
+        "1": "Cumplimiento Preventivo",
+        "2": "Segmento 1 / 3"
+      },
+      "title": "Diagnóstico para Cumplimiento Preventivo",
+      "subtitle": "Evita multas antes de que llegue una inspección",
+      "body": "Diseñado para identificar, corregir y ordenar los puntos críticos de tu empresa antes de una revisión por la Secretaría del Trabajo. Revisamos documentación, procesos, expedientes y obligaciones laborales para ayudarte a operar con respaldo.",
+      "checks": {
+        "0": "Expedientes laborales completos",
+        "1": "Cumplimiento normativo y NOMs",
+        "2": "Procesos internos alineados",
+        "3": "Riesgos ante inspección STPS",
+        "4": "Plan de acción correctivo",
+        "5": "Capacitación DC-3 y comisiones"
+      },
+      "cta": "Solicitar diagnóstico de cumplimiento STPS"
+    },
+    "vda": {
+      "badges": {
+        "0": "VDA 6.1",
+        "1": "VDA 6.3",
+        "2": "VDA 6.5",
+        "3": "Industria Automotriz"
+      },
+      "title": "Preparación para Auditorías VDA",
+      "subtitle": "Mantén tu certificación y protege tu acceso a la Unión Europea",
+      "body": "En apego a los lineamientos de la VDA (Verband der Automobilindustrie), fortalecemos sistemas de aseguramiento de calidad. Una NO RECOMENDACIÓN implica NO certificación, cerrando la puerta de exportación a la UE.",
+      "checks": {
+        "0": "Auditoría de sistema VDA 6.1",
+        "1": "Auditoría de procesos VDA 6.3",
+        "2": "Auditoría de producto VDA 6.5",
+        "3": "Entrenamiento al management",
+        "4": "Mantenimiento autónomo de sistemas",
+        "5": "Optimización de fallas del cliente"
+      },
+      "cta": "Preparar mi empresa para VDA"
+    },
+    "rec": {
+      "badges": {
+        "0": "Masivo",
+        "1": "Especializado",
+        "2": "Headhunting",
+        "3": "Gerencial"
+      },
+      "title": "Reclutamiento Masivo y Especializado",
+      "subtitle": "Contrata talento que sí funcione para tu operación",
+      "body": "Nuestros procesos de reclutamiento están diseñados para empresas que necesitan contratar con rapidez, precisión y menor riesgo de rotación. En México el 50% de contrataciones no supera los primeros 4 meses; nosotros cambiamos esa estadística.",
+      "checks": {
+        "0": "Evaluación más allá del CV",
+        "1": "Entrevistas estructuradas",
+        "2": "Compatibilidad cultural",
+        "3": "Reportes integrales de candidato",
+        "4": "Reducción de rotación",
+        "5": "Posiciones operativas a gerenciales"
+      },
+      "cta": "Iniciar proceso de reclutamiento"
+    }
+  },
+  "MidPageCta": {
+    "title": "¿Tu empresa está lista para una inspección laboral?",
+    "subtitle": "Si hoy llegara una revisión de la STPS, ¿tendrías expedientes completos y procesos alineados a la normativa?",
+    "cta": "Quiero evaluar mi nivel de cumplimiento"
+  },
+  "Coverage": {
+    "label": "Alcance Nacional",
+    "title": "Cobertura nacional para empresas que necesitan operar mejor",
+    "subtitle": "Desde nuestra sede en Puebla, brindamos atención a empresas en toda la República Mexicana en tres sectores principales.",
+    "sectors": {
+      "industrial": {
+        "title": "Industrial",
+        "desc": "Manufactura, producción, logística, automotriz y operación técnica"
+      },
+      "commercial": {
+        "title": "Comercial",
+        "desc": "Ventas, atención a clientes, distribución y puntos de venta"
+      },
+      "services": {
+        "title": "Servicios",
+        "desc": "Soporte, operación administrativa y servicios profesionales especializados"
+      }
+    },
+    "positions": {
+      "title": "Posiciones atendidas",
+      "items": {
+        "0": "Operativa",
+        "1": "Administrativa",
+        "2": "Especializada",
+        "3": "Gerencial"
+      }
+    },
+    "location": {
+      "hq": "Sede: Puebla",
+      "coverage": "Cobertura: República Mexicana"
+    }
+  },
+  "Team": {
+    "label": "Ventajas Competitivas",
+    "title": "¿Por qué elegir Parallelo?",
+    "subtitle": "Porque tu empresa no necesita soluciones superficiales. Necesita claridad, prevención y acompañamiento experto en tres frentes críticos.",
+    "diffs": {
+      "0": {
+        "num": "01",
+        "title": "Más de 30 años de experiencia",
+        "desc": "Conocimiento práctico en procesos laborales, calidad y talento humano"
+      },
+      "1": {
+        "num": "02",
+        "title": "Enfoque preventivo",
+        "desc": "Identificamos riesgos antes de que se conviertan en sanciones o pérdidas"
+      },
+      "2": {
+        "num": "03",
+        "title": "Visión consultiva",
+        "desc": "Analizamos, diagnosticamos y proponemos soluciones, no solo ejecutamos"
+      },
+      "3": {
+        "num": "04",
+        "title": "Cobertura nacional",
+        "desc": "Atendemos empresas en toda la República Mexicana desde Puebla"
+      },
+      "4": {
+        "num": "05",
+        "title": "Experiencia multisectorial",
+        "desc": "Industrial, comercial y de servicios — conocemos los retos de cada giro"
+      },
+      "5": {
+        "num": "06",
+        "title": "Procesos personalizados",
+        "desc": "Adaptamos cada diagnóstico al tamaño, giro y necesidad de la empresa"
+      }
+    },
+    "teamHeading": "Socios Expertos",
+    "members": {
+      "dinorah": {
+        "initials": "DB",
+        "name": "Dinorah Bolaños Rucabado",
+        "role": "Consultora en RRHH y Cumplimiento Laboral",
+        "tags": {
+          "0": "+25 años experiencia",
+          "1": "Cumplimiento STPS",
+          "2": "Des. Organizacional",
+          "3": "Clima laboral"
+        }
+      },
+      "ezequiel": {
+        "initials": "EI",
+        "name": "Ezequiel H. Islas Gamboa",
+        "role": "Consultor en Aseguramiento de Calidad",
+        "tags": {
+          "0": "+35 años VW",
+          "1": "Auditorías VDA",
+          "2": "Operaciones int'l",
+          "3": "Ponente universitario"
+        }
+      }
+    }
+  },
+  "BrandEmployer": {
+    "label": "Marca Empleadora",
+    "title": "Construye una empresa más ordenada, confiable y atractiva para el talento",
+    "body": "El cumplimiento laboral, la certificación en calidad y el reclutamiento estratégico también fortalecen tu marca empleadora. Una empresa que opera en regla transmite confianza hacia colaboradores, candidatos, clientes y autoridades.",
+    "quote": "El éxito como marca empleadora empieza con orden, cumplimiento, calidad y talento bien seleccionado."
+  },
+  "FinalCta": {
+    "title": "Evita multas, certifícate y mejora tus contrataciones desde hoy",
+    "subtitle": "Agenda una conversación con nuestro equipo y descubre cómo Parallelo puede ayudarte a proteger tu empresa.",
+    "cta": "Solicitar contacto"
+  },
+  "ContactForm": {
+    "label": "Conversemos",
+    "title": "Hablemos de tu empresa",
+    "subtitle": "Cuéntanos tu situación y uno de nuestros consultores te orientará sobre el siguiente paso.",
+    "fields": {
+      "nombre": "Nombre completo *",
+      "empresa": "Empresa *",
+      "cargo": "Cargo",
+      "telefono": "Teléfono *",
+      "email": "Correo electrónico *",
+      "empleados": "No. aproximado de empleados",
+      "servicio": "Servicio de interés",
+      "mensaje": "Mensaje / describe tu situación"
+    },
+    "placeholders": {
+      "nombre": "Tu nombre",
+      "empresa": "Nombre de la empresa",
+      "cargo": "Director, Gerente RRHH...",
+      "telefono": "+52 222 000 0000",
+      "email": "correo@empresa.com",
+      "mensaje": "Cuéntanos brevemente tu situación o necesidad principal..."
+    },
+    "empleadosOptions": {
+      "0": "Seleccionar rango",
+      "1": "1–20",
+      "2": "21–100",
+      "3": "101–500",
+      "4": "500+"
+    },
+    "servicioOptions": {
+      "stps": "Cumplimiento Laboral STPS",
+      "vda": "Auditorías VDA",
+      "rec": "Reclutamiento",
+      "all": "Todos los servicios"
+    },
+    "privacy": "He leído y acepto el <link>Aviso de Privacidad</link>",
+    "submit": "Enviar solicitud",
+    "submitting": "Enviando...",
+    "success": "¡Gracias! Un consultor se pondrá en contacto contigo pronto.",
+    "error": "No pudimos enviar su mensaje. Intente de nuevo o contáctenos por teléfono.",
+    "micro": "Uno de nuestros consultores se pondrá en contacto contigo para orientarte sobre el siguiente paso.",
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Ingrese un correo válido"
+  },
+  "Footer": {
+    "description": "Consultoría especializada en cumplimiento preventivo, preparación para auditorías VDA y reclutamiento estratégico.",
+    "tagline": "Prevenimos riesgos, garantizamos cumplimiento, protegemos tu empresa.",
+    "columns": {
+      "services": "Servicios",
+      "company": "Empresa",
+      "contact": "Contacto",
+      "coverage": "Cobertura"
+    },
+    "links": {
+      "stps": "Cumplimiento Laboral STPS",
+      "vda": "Auditorías VDA",
+      "rec": "Reclutamiento",
+      "home": "Inicio",
+      "coverage": "Cobertura",
+      "contact": "Contacto",
+      "privacy": "Aviso de privacidad"
+    },
+    "phones": {
+      "dinorah": { "label": "Dinorah", "number": "222 534 05 48" },
+      "ezequiel": { "label": "Ezequiel", "number": "222 258 07 86" }
+    },
+    "email": "contacto@parallelo.com",
+    "coverage": {
+      "hq": "Sede en Puebla",
+      "national": "Cobertura nacional MX"
+    },
+    "legal": "© {year} Parallelo Consultoría · Todos los derechos reservados ·",
+    "social": {
+      "facebook": "FB",
+      "linkedin": "LinkedIn",
+      "instagram": "IG"
+    }
+  },
+  "Privacy": {
+    "title": "Aviso de Privacidad",
+    "lastUpdated": "Última actualización: mayo 2026",
+    "sections": {
+      "0": {
+        "title": "Responsable",
+        "body": "Parallelo Consultoría, con domicilio en Puebla, México, es responsable del tratamiento de sus datos personales recabados a través de este sitio web y formularios de contacto."
+      },
+      "1": {
+        "title": "Datos que recabamos",
+        "body": "Nombre, empresa, cargo, teléfono, correo electrónico, número de empleados, servicio de interés y mensaje que usted proporcione voluntariamente."
+      },
+      "2": {
+        "title": "Finalidad",
+        "body": "Atender su solicitud de información, cotización o servicios de consultoría, así como dar seguimiento comercial relacionado con nuestros servicios."
+      },
+      "3": {
+        "title": "Derechos ARCO",
+        "body": "Usted puede solicitar acceso, rectificación, cancelación u oposición al tratamiento de sus datos escribiendo a contacto@parallelo.com."
+      },
+      "4": {
+        "title": "Transferencia de datos",
+        "body": "No transferimos sus datos a terceros sin su consentimiento, salvo las excepciones previstas en la LFPDPPP."
+      }
+    },
+    "close": "Cerrar"
+  }
+}

@@ -1,0 +1,136 @@
+.heading {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.heading :global(.section-label) {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 24px;
+  background: var(--p-light);
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--p-muted);
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  text-align: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tab:hover {
+  color: var(--p-black);
+}
+
+.tabActive {
+  background: var(--p-white);
+  color: var(--p-black);
+  box-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.08);
+}
+
+.panel {
+  display: none;
+}
+
+.panelActive {
+  display: block;
+}
+
+.badgeRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.badge {
+  font-size: 10px;
+  color: var(--p-green-dark);
+  background: var(--p-green-light);
+  border: 0.5px solid rgba(60, 171, 63, 0.2);
+  border-radius: 3px;
+  padding: 3px 8px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.panelTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: var(--font-weight-bold);
+  color: var(--p-black);
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.panelSub {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--p-green);
+  margin: 0 0 10px;
+}
+
+.panelBody {
+  font-size: 12px;
+  color: var(--p-slate);
+  line-height: 1.7;
+  margin: 0 0 16px;
+  max-width: 640px;
+}
+
+.checks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.checks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--p-slate);
+  line-height: 1.4;
+}
+
+.checkIcon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--p-green-light);
+  border: 0.5px solid rgba(60, 171, 63, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.checkIcon::after {
+  content: "✓";
+  font-size: 8px;
+  color: var(--p-green);
+  font-weight: 700;
+}
+
+@media (max-width: 400px) {
+  .checks {
+    grid-template-columns: 1fr;
+  }
+}

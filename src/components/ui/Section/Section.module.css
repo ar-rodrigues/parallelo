@@ -1,0 +1,31 @@
+.section {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.alt {
+  background-color: var(--p-light);
+}
+
+.dark {
+  background-color: var(--p-black);
+  color: var(--p-white);
+}
+
+.green {
+  background-color: var(--p-green);
+  color: var(--p-white);
+}
+
+.light {
+  background-color: var(--p-lighter);
+}
+
+.fullWidth .container {
+  max-width: none;
+}

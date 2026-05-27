@@ -1,0 +1,59 @@
+.wrapper {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: inherit;
+  line-height: var(--line-height-tight);
+  margin: 0 0 var(--spacing-md);
+  letter-spacing: -0.3px;
+}
+
+.left .title {
+  font-size: 24px;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  max-width: 640px;
+}
+
+.left .subtitle {
+  font-size: 13px;
+  color: var(--p-muted);
+  max-width: none;
+}
+
+.light .title {
+  color: var(--p-white);
+}
+
+.light .subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.center .title {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.center .subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}

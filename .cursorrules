@@ -1,0 +1,66 @@
+# Parallelo — Reglas del proyecto
+
+## Idioma y audiencia
+- La audiencia es hispanohablante. Todo el texto visible en la UI debe estar en español.
+- Los comentarios en el código pueden estar en español cuando aporten claridad.
+- No hardcodear strings en componentes: usar siempre `next-intl`.
+
+## Internacionalización (next-intl)
+- Rutas con prefijo de locale: `/es`, `/en`, etc. (configurado en `src/i18n/routing.ts`).
+- Usar `proxy.ts` (no `middleware.ts`) para detección de locale en Next.js 16+.
+- Importar navegación desde `@/i18n/navigation` (`Link`, `useRouter`, `usePathname`, `redirect`), nunca desde `next/navigation`.
+- En layouts y páginas del servidor, llamar `setRequestLocale(locale)` antes de usar funciones de next-intl.
+- **OBLIGATORIO**: Cada componente nuevo con texto visible debe añadir sus claves en `messages/es.json` bajo un namespace que coincida con el nombre del componente (ej. `Hero`, `Features`, `Header`).
+- Usar `useTranslations('NombreComponente')` en client components y `getTranslations` en server components.
+
+## Componentes reutilizables (DRY)
+- Extraer lógica repetida en hooks (`src/hooks/`), utilidades (`src/lib/`) o componentes compartidos.
+- Un componente = una responsabilidad. Mantener componentes pequeños y componibles.
+- Todo componente debe aceptar `className?: string` para permitir estilos externos.
+- Usar `React.forwardRef` cuando el componente envuelva un elemento DOM interactivo.
+- Componentes base/primitivos en `src/components/ui/`.
+- Secciones de página en `src/components/sections/`.
+- Cada componente vive en su carpeta: `ComponentName/index.tsx` y opcionalmente `ComponentName.module.css`.
+- Preferir composición sobre herencia o props excesivamente anidadas.
+- No duplicar estilos: reutilizar `Section`, `SectionHeading` y variables CSS.
+
+## CSS y diseño
+- Usar variables CSS definidas en `src/styles/variables.css` para colores, espaciado, tipografía y sombras.
+- Convención de nombres: `--{categoria}-{propiedad}` (ej. `--color-primary`, `--spacing-lg`).
+- No usar valores hex/rgb hardcodeados en componentes si existe una variable equivalente.
+- Estilos de componente en CSS Modules (`*.module.css`) cuando sea necesario.
+- El tema de Ant Design se configura en `src/config/theme.ts` referenciando las mismas variables CSS.
+- Componentes de Ant Design que requieran interactividad deben estar en archivos con `'use client'`.
+
+## TypeScript
+- Preferir `interface` sobre `type` para props de componentes.
+- Definir siempre tipos explícitos para props exportadas.
+- Evitar `any`; usar tipos estrictos.
+
+## Ant Design
+- Importar sub-componentes por ruta (ej. `antd/es/select`) en lugar de notación de punto (`Select.Option`).
+- Envolver la app con `AntdRegistry` en el layout raíz para SSR sin parpadeo de estilos.
+- Usar `ConfigProvider` con el tema de `src/config/theme.ts`.
+
+## Estructura de archivos
+```
+src/
+├── app/[locale]/     # Rutas con locale
+├── components/ui/    # Componentes reutilizables base
+├── components/sections/  # Secciones de landing
+├── config/           # Constantes y tema
+├── hooks/            # Custom hooks
+├── i18n/             # routing, navigation, request
+├── styles/           # variables.css global
+└── proxy.ts          # Locale proxy (next-intl)
+messages/
+└── es.json           # Traducciones (añadir en.json al expandir)
+```
+
+## Checklist al crear un componente nuevo
+1. Crear carpeta en `ui/` o `sections/` con `index.tsx` (+ `.module.css` si aplica).
+2. Añadir namespace en `messages/es.json` con todas las cadenas visibles.
+3. Usar `useTranslations` / `getTranslations` para consumir textos.
+4. Usar variables CSS, no valores literales.
+5. Exportar props tipadas con `interface`.
+6. Añadir `'use client'` solo si el componente usa hooks, estado o componentes de antd interactivos.

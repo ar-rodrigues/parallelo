@@ -1,0 +1,120 @@
+.heading {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.heading :global(.section-label) {
+  display: block;
+}
+
+.sectorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sectorCard {
+  background: var(--p-white);
+  border: 0.5px solid var(--p-border);
+  border-radius: 8px;
+  padding: 16px 14px;
+  border-top: 2px solid var(--p-green);
+}
+
+.sectorIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--p-green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.sectorIcon i {
+  font-size: 16px;
+  color: var(--p-green);
+}
+
+.sectorName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--p-black);
+  margin: 0 0 4px;
+}
+
+.sectorDesc {
+  font-size: 11px;
+  color: var(--p-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.bottomBar {
+  background: var(--p-white);
+  border: 0.5px solid var(--p-border);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.positions {
+  flex: 1;
+  min-width: 180px;
+}
+
+.positionsTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--p-muted);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.positionChips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  font-size: 11px;
+  background: var(--p-light);
+  border-radius: 3px;
+  padding: 3px 8px;
+  color: var(--p-slate);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.location i {
+  color: var(--p-green);
+  font-size: 20px;
+}
+
+.locationHq {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--p-black);
+}
+
+.locationCoverage {
+  font-size: 11px;
+  color: var(--p-muted);
+}
+
+@media (max-width: 400px) {
+  .sectorGrid {
+    grid-template-columns: 1fr;
+  }
+}

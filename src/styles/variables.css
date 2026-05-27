@@ -1,0 +1,77 @@
+:root {
+  /* Parallelo brand tokens */
+  --p-green: #3cab3f;
+  --p-green-dark: #2a8a2d;
+  --p-black: #1a1a1a;
+  --p-charcoal: #2c2c2c;
+  --p-slate: #4a4a4a;
+  --p-muted: #555555;
+  --p-light: #f4f4f2;
+  --p-lighter: #f9f9f7;
+  --p-white: #ffffff;
+  --p-border: rgba(0, 0, 0, 0.08);
+  --p-green-light: rgba(60, 171, 63, 0.08);
+  --p-green-mid: rgba(60, 171, 63, 0.15);
+
+  /* Semantic aliases */
+  --color-primary: var(--p-green);
+  --color-primary-hover: var(--p-green-dark);
+  --color-secondary: var(--p-charcoal);
+  --color-accent: var(--p-green);
+  --color-background: var(--p-white);
+  --color-background-alt: var(--p-light);
+  --color-surface: var(--p-white);
+  --color-text: var(--p-black);
+  --color-text-secondary: var(--p-slate);
+  --color-text-muted: var(--p-muted);
+  --color-border: var(--p-border);
+  --color-success: var(--p-green);
+  --color-warning: #faad14;
+  --color-error: #ff4d4f;
+
+  /* Typography */
+  --font-display: var(--font-barlow-condensed), "Barlow Condensed", sans-serif;
+  --font-body: var(--font-barlow), "Barlow", sans-serif;
+  --font-family: var(--font-body);
+  --font-family-mono: ui-monospace, monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.15;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+
+  /* Layout */
+  --border-radius-sm: 4px;
+  --border-radius: 6px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 16px;
+  --container-max-width: 1200px;
+  --header-height: 72px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-nav: 0 1px 8px rgba(0, 0, 0, 0.1);
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}

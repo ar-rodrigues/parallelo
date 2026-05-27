@@ -1,0 +1,107 @@
+.header {
+  margin-bottom: 28px;
+}
+
+.label {
+  color: #5fd162;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15;
+  color: var(--p-white);
+  margin: 0 0 10px;
+}
+
+.title em {
+  font-style: normal;
+  color: #5fd162;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.cardWide {
+  grid-column: 1 / -1;
+  background: rgba(60, 171, 63, 0.08);
+  border-color: rgba(60, 171, 63, 0.2);
+}
+
+.amount {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: var(--font-weight-bold);
+  color: var(--p-green);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.cardLabel {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.4;
+}
+
+.source {
+  display: block;
+  font-size: 9px;
+  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 4px;
+}
+
+.multiplierTitle {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  color: #5fd162;
+  margin-bottom: 4px;
+}
+
+.multiplierDesc {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.quoteBar {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 2.5px solid var(--p-green);
+  padding: 10px 14px;
+  border-radius: 0 4px 4px 0;
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 4px 0 0;
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
