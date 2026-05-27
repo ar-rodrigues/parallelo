@@ -16,15 +16,12 @@ export function useCountUp({
   duration = 1200,
 }: UseCountUpOptions) {
   const ref = useRef<HTMLSpanElement>(null);
-  const [display, setDisplay] = useState(
-    displayOverride ?? (target > 0 ? "0" + suffix : displayOverride ?? "0"),
+  const [animatedDisplay, setAnimatedDisplay] = useState(() =>
+    target > 0 ? "0" + suffix : "0",
   );
 
   useEffect(() => {
-    if (displayOverride) {
-      setDisplay(displayOverride);
-      return;
-    }
+    if (displayOverride) return;
 
     const el = ref.current;
     if (!el || target <= 0) return;
@@ -38,7 +35,7 @@ export function useCountUp({
         const tick = (now: number) => {
           const progress = Math.min((now - start) / duration, 1);
           const value = Math.round(progress * target);
-          setDisplay(String(value) + suffix);
+          setAnimatedDisplay(String(value) + suffix);
           if (progress < 1) requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
@@ -49,6 +46,8 @@ export function useCountUp({
     observer.observe(el);
     return () => observer.disconnect();
   }, [target, suffix, displayOverride, duration]);
+
+  const display = displayOverride ?? animatedDisplay;
 
   return { ref, display };
 }

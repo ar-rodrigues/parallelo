@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import Input from "antd/es/input";
 import Select from "antd/es/select";
@@ -47,20 +47,21 @@ const INITIAL: FormState = {
   website: "",
 };
 
+function getInitialFormState(): FormState {
+  if (typeof window === "undefined") return INITIAL;
+  const match = window.location.hash.match(/[?&]servicio=(\w+)/);
+  const param = match?.[1];
+  if (param && SERVICIO_MAP[param]) {
+    return { ...INITIAL, servicio: SERVICIO_MAP[param] };
+  }
+  return INITIAL;
+}
+
 export function ContactForm() {
   const t = useTranslations("ContactForm");
-  const [form, setForm] = useState<FormState>(INITIAL);
+  const [form, setForm] = useState<FormState>(getInitialFormState);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
-  useEffect(() => {
-    const hash = window.location.hash;
-    const match = hash.match(/[?&]servicio=(\w+)/);
-    const param = match?.[1];
-    if (param && SERVICIO_MAP[param]) {
-      setForm((f) => ({ ...f, servicio: SERVICIO_MAP[param] }));
-    }
-  }, []);
 
   const set =
     (field: keyof FormState) =>
