@@ -32,14 +32,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_MX",
     siteName: "Parallelo Consultoría",
-    images: ["/Flavicon-02.webp"],
+    images: [
+      {
+        url: "https://www.parallelo.com.mx/Assets_Landing_Parallelo.png",
+        width: 2083,
+        height: 2083,
+        alt: "Parallelo Consultoría",
+      },
+    ],
   },
   twitter: {
     card: "summary",
     title: "Parallelo",
     description:
       "Consultoría en cumplimiento preventivo STPS, auditorías VDA y reclutamiento estratégico.",
-    images: ["/Flavicon-02.webp"],
+    images: ["https://www.parallelo.com.mx/Assets_Landing_Parallelo.png"],
   },
   icons: {
     icon: "/Flavicon-02.webp",

@@ -17,6 +17,12 @@ export function generateStaticParams() {
 }
 
 const FAVICON_PATH = "/Flavicon-02.webp" as const;
+const SHARE_IMAGE = {
+  url: "https://www.parallelo.com.mx/Assets_Landing_Parallelo.png",
+  width: 2083,
+  height: 2083,
+  alt: "Parallelo Consultoría",
+} as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -34,13 +40,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: "es_MX",
       type: "website",
       siteName: "Parallelo Consultoría",
-      images: [FAVICON_PATH],
+      images: [SHARE_IMAGE],
     },
     twitter: {
       card: "summary",
       title: t("title"),
       description: t("description"),
-      images: [FAVICON_PATH],
+      images: [SHARE_IMAGE.url],
     },
   };
 }
