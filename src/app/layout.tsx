@@ -21,9 +21,14 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.parallelo.com.mx"),
   title: "Parallelo",
   description:
-    "Consultoría en cumplimiento laboral STPS, auditorías VDA y reclutamiento estratégico.",
+    "Consultoría en cumplimiento preventivo STPS, auditorías VDA y reclutamiento estratégico.",
+  icons: {
+    icon: "/hero_image.jpeg",
+    apple: "/hero_image.jpeg",
+  },
 };
 
 export default function RootLayout({

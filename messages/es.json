@@ -1,11 +1,10 @@
 {
   "Metadata": {
-    "title": "Parallelo | Cumplimiento Laboral, Auditorías VDA y Reclutamiento — Puebla, México",
-    "description": "Consultoría especializada en diagnóstico de cumplimiento laboral STPS, preparación para auditorías VDA 6.1/6.3/6.5 y reclutamiento masivo. Sede en Puebla, cobertura nacional."
+    "title": "Parallelo | Cumplimiento Preventivo, Auditorías VDA y Reclutamiento — Puebla, México",
+    "description": "Consultoría especializada en diagnóstico de cumplimiento preventivo STPS, preparación para auditorías VDA 6.1/6.3/6.5 y reclutamiento masivo. Sede en Puebla, cobertura nacional."
   },
   "Header": {
     "logoAlt": "Parallelo Consultoría",
-    "tagline": "Cumplimiento y Prevención",
     "nav": {
       "services": "Servicios",
       "coverage": "Cobertura",
@@ -17,9 +16,9 @@
     "menuClose": "Cerrar menú"
   },
   "Hero": {
-    "imageAlt": "Profesional con casco y tableta, representando cumplimiento laboral y operaciones industriales",
+    "imageAlt": "Profesional con casco y tableta, representando cumplimiento preventivo y operaciones industriales",
     "tag": "Cumplimiento · Calidad · Talento",
-    "titleBefore": "Diagnóstico de Cumplimiento Laboral, ",
+    "titleBefore": "Diagnóstico de Cumplimiento Preventivo, ",
     "titleHighlight": "preparación VDA",
     "titleAfter": " y Reclutamiento Especializado",
     "subtitle": "Evita multas ante la STPS, prepara a tu empresa para auditorías VDA y contrata talento que fortalezca tu operación.",
@@ -235,7 +234,7 @@
       "dinorah": {
         "initials": "DB",
         "name": "Dinorah Bolaños Rucabado",
-        "role": "Consultora en RRHH y Cumplimiento Laboral",
+        "role": "Consultora en RRHH y Cumplimiento Preventivo",
         "tags": {
           "0": "+25 años experiencia",
           "1": "Cumplimiento STPS",
@@ -259,7 +258,7 @@
   "BrandEmployer": {
     "label": "Marca Empleadora",
     "title": "Construye una empresa más ordenada, confiable y atractiva para el talento",
-    "body": "El cumplimiento laboral, la certificación en calidad y el reclutamiento estratégico también fortalecen tu marca empleadora. Una empresa que opera en regla transmite confianza hacia colaboradores, candidatos, clientes y autoridades.",
+    "body": "El cumplimiento preventivo, la certificación en calidad y el reclutamiento estratégico también fortalecen tu marca empleadora. Una empresa que opera en regla transmite confianza hacia colaboradores, candidatos, clientes y autoridades.",
     "quote": "El éxito como marca empleadora empieza con orden, cumplimiento, calidad y talento bien seleccionado."
   },
   "FinalCta": {
@@ -297,7 +296,7 @@
       "4": "500+"
     },
     "servicioOptions": {
-      "stps": "Cumplimiento Laboral STPS",
+      "stps": "Cumplimiento Preventivo STPS",
       "vda": "Auditorías VDA",
       "rec": "Reclutamiento",
       "all": "Todos los servicios"
@@ -322,7 +321,7 @@
       "coverage": "Cobertura"
     },
     "links": {
-      "stps": "Cumplimiento Laboral STPS",
+      "stps": "Cumplimiento Preventivo STPS",
       "vda": "Auditorías VDA",
       "rec": "Reclutamiento",
       "home": "Inicio",

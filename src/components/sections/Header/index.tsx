@@ -43,7 +43,6 @@ export function Header() {
             style={{ width: "auto", height: 28 }}
             priority
           />
-          <span className={styles.tagline}>{t("tagline")}</span>
         </Link>
 
         <button

@@ -4,7 +4,8 @@ export function JsonLd() {
     "@type": "ProfessionalService",
     name: "Parallelo Consultoría",
     description:
-      "Consultoría en cumplimiento laboral STPS, auditorías VDA y reclutamiento estratégico.",
+      "Consultoría en cumplimiento preventivo STPS, auditorías VDA y reclutamiento estratégico.",
+    image: "https://www.parallelo.com.mx/hero_image.jpeg",
     url: "https://www.parallelo.com.mx",
     telephone: ["+522225340548", "+522222580786"],
     email: "contacto@paralleloconsultoria.com",
@@ -21,7 +22,7 @@ export function JsonLd() {
     },
     areaServed: "MX",
     serviceType: [
-      "Cumplimiento Laboral STPS",
+      "Cumplimiento Preventivo STPS",
       "Auditorías VDA",
       "Reclutamiento",
     ],
