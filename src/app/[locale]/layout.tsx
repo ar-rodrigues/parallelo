@@ -16,26 +16,11 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-const HERO_IMAGE = {
-  path: "/Assets_Landing_Parallelo.png",
-  width: 967,
-  height: 929,
-} as const;
-
 const FAVICON_PATH = "/Flavicon-02.webp" as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const tHero = await getTranslations({ locale, namespace: "Hero" });
-
-  const ogImage = {
-    url: HERO_IMAGE.path,
-    width: HERO_IMAGE.width,
-    height: HERO_IMAGE.height,
-    alt: tHero("imageAlt"),
-  };
-
   return {
     title: t("title"),
     description: t("description"),
@@ -48,13 +33,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("description"),
       locale: "es_MX",
       type: "website",
-      images: [ogImage],
+      siteName: "Parallelo Consultoría",
+      images: [FAVICON_PATH],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       title: t("title"),
       description: t("description"),
-      images: [HERO_IMAGE.path],
+      images: [FAVICON_PATH],
     },
   };
 }

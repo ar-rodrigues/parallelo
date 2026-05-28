@@ -25,6 +25,22 @@ export const metadata: Metadata = {
   title: "Parallelo",
   description:
     "Consultoría en cumplimiento preventivo STPS, auditorías VDA y reclutamiento estratégico.",
+  openGraph: {
+    title: "Parallelo",
+    description:
+      "Consultoría en cumplimiento preventivo STPS, auditorías VDA y reclutamiento estratégico.",
+    type: "website",
+    locale: "es_MX",
+    siteName: "Parallelo Consultoría",
+    images: ["/Flavicon-02.webp"],
+  },
+  twitter: {
+    card: "summary",
+    title: "Parallelo",
+    description:
+      "Consultoría en cumplimiento preventivo STPS, auditorías VDA y reclutamiento estratégico.",
+    images: ["/Flavicon-02.webp"],
+  },
   icons: {
     icon: "/Flavicon-02.webp",
     apple: "/Flavicon-02.webp",
