@@ -1,5 +1,11 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import {
+  isHoneypotTriggered,
+  isValidEmail,
+  isValidMessage,
+  isValidPhone,
+} from "@/lib/contactValidation";
 
 interface ContactBody {
   nombre: string;
@@ -23,16 +29,30 @@ export async function POST(request: Request) {
   try {
     const body = (await request.json()) as ContactBody;
 
-    if (body.website) {
+    if (isHoneypotTriggered(body.website)) {
       return NextResponse.json({ ok: true });
     }
 
-    const { nombre, empresa, telefono, email } = body;
-    if (!nombre?.trim() || !empresa?.trim() || !telefono?.trim() || !email?.trim()) {
+    const { nombre, empresa, telefono, email, mensaje } = body;
+    if (
+      !nombre?.trim() ||
+      !empresa?.trim() ||
+      !telefono?.trim() ||
+      !email?.trim() ||
+      !isValidMessage(mensaje ?? "")
+    ) {
       return NextResponse.json(
         { error: "Campos obligatorios incompletos" },
         { status: 400 },
       );
+    }
+
+    if (!isValidPhone(telefono)) {
+      return NextResponse.json({ error: "Teléfono no válido" }, { status: 400 });
+    }
+
+    if (!isValidEmail(email)) {
+      return NextResponse.json({ error: "Correo no válido" }, { status: 400 });
     }
 
     const host = process.env.SMTP_HOST;
@@ -72,7 +92,7 @@ export async function POST(request: Request) {
       `Servicio: ${servicioLabel}`,
       "",
       "Mensaje:",
-      body.mensaje || "—",
+      mensaje!.trim(),
     ].join("\n");
 
     await transporter.sendMail({

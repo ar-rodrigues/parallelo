@@ -9,6 +9,13 @@ import Button from "antd/es/button";
 import { Section } from "@/components/ui/Section";
 import { PrivacyLinkButton } from "@/components/ui/PrivacyModal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import {
+  isHoneypotTriggered,
+  isValidEmail,
+  isValidMessage,
+  isValidPhone,
+  sanitizePhoneInput,
+} from "@/lib/contactValidation";
 import styles from "./ContactForm.module.css";
 
 const EMPLEADOS_KEYS = ["0", "1", "2", "3", "4"] as const;
@@ -75,9 +82,10 @@ export function ContactForm() {
     if (!form.nombre.trim()) next.nombre = t("required");
     if (!form.empresa.trim()) next.empresa = t("required");
     if (!form.telefono.trim()) next.telefono = t("required");
+    else if (!isValidPhone(form.telefono)) next.telefono = t("invalidPhone");
     if (!form.email.trim()) next.email = t("required");
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      next.email = t("invalidEmail");
+    else if (!isValidEmail(form.email)) next.email = t("invalidEmail");
+    if (!isValidMessage(form.mensaje)) next.mensaje = t("required");
     if (!form.privacy) next.privacy = t("required");
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -85,6 +93,12 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (isHoneypotTriggered(form.website)) {
+      setStatus("success");
+      return;
+    }
+
     if (!validate()) return;
 
     setStatus("loading");
@@ -125,15 +139,18 @@ export function ContactForm() {
         className={styles.heading}
       />
       <form className={styles.form} onSubmit={handleSubmit} noValidate>
-        <input
-          type="text"
-          name="website"
-          className={styles.honeypot}
-          tabIndex={-1}
-          autoComplete="off"
-          value={form.website}
-          onChange={(e) => set("website")(e.target.value)}
-        />
+        <div className={styles.honeypot} aria-hidden="true">
+          <label htmlFor="contact-website">{t("honeypotLabel")}</label>
+          <input
+            id="contact-website"
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={form.website}
+            onChange={(e) => set("website")(e.target.value)}
+          />
+        </div>
         <div className={styles.grid}>
           <div className={styles.field}>
             <label htmlFor="nombre">{t("fields.nombre")}</label>
@@ -173,9 +190,11 @@ export function ContactForm() {
             <label htmlFor="telefono">{t("fields.telefono")}</label>
             <Input
               id="telefono"
+              type="tel"
+              inputMode="tel"
               size="large"
               value={form.telefono}
-              onChange={(e) => set("telefono")(e.target.value)}
+              onChange={(e) => set("telefono")(sanitizePhoneInput(e.target.value))}
               placeholder={t("placeholders.telefono")}
               status={errors.telefono ? "error" : undefined}
             />
@@ -231,7 +250,9 @@ export function ContactForm() {
               value={form.mensaje}
               onChange={(e) => set("mensaje")(e.target.value)}
               placeholder={t("placeholders.mensaje")}
+              status={errors.mensaje ? "error" : undefined}
             />
+            {errors.mensaje && <span className={styles.error}>{errors.mensaje}</span>}
           </div>
         </div>
         <div className={styles.submitRow}>

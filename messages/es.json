@@ -278,7 +278,7 @@
       "email": "Correo electrónico *",
       "empleados": "No. aproximado de empleados",
       "servicio": "Servicio de interés",
-      "mensaje": "Mensaje / describe tu situación"
+      "mensaje": "Mensaje / describe tu situación *"
     },
     "placeholders": {
       "nombre": "Tu nombre",
@@ -308,7 +308,9 @@
     "error": "No pudimos enviar su mensaje. Intente de nuevo o contáctenos por teléfono.",
     "micro": "Uno de nuestros consultores se pondrá en contacto contigo para orientarte sobre el siguiente paso.",
     "required": "Este campo es obligatorio",
-    "invalidEmail": "Ingrese un correo válido"
+    "invalidEmail": "Ingrese un correo válido",
+    "invalidPhone": "Ingrese un teléfono válido (mínimo 10 dígitos, sin letras)",
+    "honeypotLabel": "Sitio web de la empresa (no completar)"
   },
   "Footer": {
     "logoAlt": "Parallelo Consultoría",
