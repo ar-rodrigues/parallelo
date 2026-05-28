@@ -99,8 +99,7 @@
     "stps": {
       "badges": {
         "0": "STPS",
-        "1": "Cumplimiento Preventivo",
-        "2": "Segmento 1 / 3"
+        "1": "Cumplimiento Preventivo"
       },
       "title": "Diagnóstico para Cumplimiento Preventivo",
       "subtitle": "Evita multas antes de que llegue una inspección",
@@ -332,7 +331,7 @@
       "dinorah": { "label": "Dinorah", "number": "222 534 05 48" },
       "ezequiel": { "label": "Ezequiel", "number": "222 258 07 86" }
     },
-    "email": "contacto@parallelo.com",
+    "email": "contacto@paralleloconsultoria.com",
     "coverage": {
       "hq": "Sede en Puebla",
       "national": "Cobertura nacional MX"
@@ -340,8 +339,11 @@
     "legal": "© {year} Parallelo Consultoría · Todos los derechos reservados ·",
     "social": {
       "facebook": "FB",
+      "facebookUrl": "https://www.facebook.com/ParalleloConsultoria/",
       "linkedin": "LinkedIn",
-      "instagram": "IG"
+      "linkedinUrl": "https://www.linkedin.com/in/parallelo-consultoria/",
+      "instagram": "IG",
+      "instagramUrl": "https://www.instagram.com/parallelo.consultoria/"
     }
   },
   "Privacy": {
@@ -362,7 +364,7 @@
       },
       "3": {
         "title": "Derechos ARCO",
-        "body": "Usted puede solicitar acceso, rectificación, cancelación u oposición al tratamiento de sus datos escribiendo a contacto@parallelo.com."
+        "body": "Usted puede solicitar acceso, rectificación, cancelación u oposición al tratamiento de sus datos escribiendo a contacto@paralleloconsultoria.com."
       },
       "4": {
         "title": "Transferencia de datos",

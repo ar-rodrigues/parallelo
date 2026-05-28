@@ -1,12 +1,14 @@
 .bar {
   background: var(--p-lighter);
   border-bottom: 0.5px solid var(--p-border);
-  padding: 12px 24px;
+  padding: 12px 0;
 }
 
 .inner {
   max-width: var(--container-max-width);
   margin: 0 auto;
+  width: 100%;
+  padding: 0 var(--spacing-xl);
   display: flex;
   align-items: center;
   gap: 6px;

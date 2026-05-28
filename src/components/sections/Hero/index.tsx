@@ -33,33 +33,35 @@ export function Hero() {
     <section className={styles.hero}>
       <div className={styles.accentLine} aria-hidden="true" />
       <div className={styles.gridTexture} aria-hidden="true" />
-      <div className={styles.content}>
-        <span className={styles.tag}>{t("tag")}</span>
-        <h1 className={styles.title}>
-          {t("titleBefore")}
-          <em>{t("titleHighlight")}</em>
-          {t("titleAfter")}
-        </h1>
-        <p className={styles.subtitle}>{t("subtitle")}</p>
-        <div className={styles.actions}>
-          <a href="#contacto" className="btn-primary">
-            {t("ctaPrimary")}
-          </a>
-          <a href="#servicios" className="btn-secondary">
-            {t("ctaSecondary")}
-          </a>
-        </div>
-        <p className={styles.micro}>
-          {t("micro.coverage")}
-          <span aria-hidden="true">·</span>
-          {t("micro.hq")}
-          <span aria-hidden="true">·</span>
-          {t("micro.sectors")}
-        </p>
-        <div className={styles.stats}>
-          {STAT_KEYS.map((key) => (
-            <HeroStat key={key} statKey={key} />
-          ))}
+      <div className={styles.inner}>
+        <div className={styles.content}>
+          <span className={styles.tag}>{t("tag")}</span>
+          <h1 className={styles.title}>
+            {t("titleBefore")}
+            <em>{t("titleHighlight")}</em>
+            {t("titleAfter")}
+          </h1>
+          <p className={styles.subtitle}>{t("subtitle")}</p>
+          <div className={styles.actions}>
+            <a href="#contacto" className="btn-primary">
+              {t("ctaPrimary")}
+            </a>
+            <a href="#servicios" className="btn-secondary">
+              {t("ctaSecondary")}
+            </a>
+          </div>
+          <p className={styles.micro}>
+            {t("micro.coverage")}
+            <span aria-hidden="true">·</span>
+            {t("micro.hq")}
+            <span aria-hidden="true">·</span>
+            {t("micro.sectors")}
+          </p>
+          <div className={styles.stats}>
+            {STAT_KEYS.map((key) => (
+              <HeroStat key={key} statKey={key} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

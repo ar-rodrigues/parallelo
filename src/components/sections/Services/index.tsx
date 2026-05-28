@@ -23,7 +23,7 @@ function ServicePanel({
 }) {
   const t = useTranslations("Services");
   const badgeCount =
-    id === "stps" ? 3 : id === "vda" ? 4 : 4;
+    id === "stps" ? 2 : id === "vda" ? 4 : 4;
 
   return (
     <div

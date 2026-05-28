@@ -39,7 +39,7 @@ export async function POST(request: Request) {
     const port = Number(process.env.SMTP_PORT ?? "587");
     const user = process.env.SMTP_USER;
     const pass = process.env.SMTP_PASS;
-    const to = process.env.CONTACT_EMAIL ?? "contacto@parallelo.com";
+    const to = process.env.CONTACT_EMAIL ?? "contacto@paralleloconsultoria.com";
 
     if (!host || !user || !pass) {
       console.error("SMTP no configurado");

@@ -7,7 +7,12 @@ export function JsonLd() {
       "Consultoría en cumplimiento laboral STPS, auditorías VDA y reclutamiento estratégico.",
     url: "https://www.parallelo.com.mx",
     telephone: ["+522225340548", "+522222580786"],
-    email: "contacto@parallelo.com",
+    email: "contacto@paralleloconsultoria.com",
+    sameAs: [
+      "https://www.facebook.com/ParalleloConsultoria/",
+      "https://www.linkedin.com/in/parallelo-consultoria/",
+      "https://www.instagram.com/parallelo.consultoria/",
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Puebla",

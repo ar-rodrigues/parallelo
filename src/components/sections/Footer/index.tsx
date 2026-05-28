@@ -84,15 +84,30 @@ export function Footer() {
             </PrivacyLinkButton>
           </p>
           <div className={styles.social}>
-            <a href="#" className={styles.socialLink}>
+            <a
+              href={t("social.facebookUrl")}
+              className={styles.socialLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="ti ti-brand-facebook" aria-hidden="true" />
               {t("social.facebook")}
             </a>
-            <a href="#" className={styles.socialLink}>
+            <a
+              href={t("social.linkedinUrl")}
+              className={styles.socialLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="ti ti-brand-linkedin" aria-hidden="true" />
               {t("social.linkedin")}
             </a>
-            <a href="#" className={styles.socialLink}>
+            <a
+              href={t("social.instagramUrl")}
+              className={styles.socialLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="ti ti-brand-instagram" aria-hidden="true" />
               {t("social.instagram")}
             </a>
