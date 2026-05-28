@@ -4,6 +4,7 @@
     "description": "Consultoría especializada en diagnóstico de cumplimiento laboral STPS, preparación para auditorías VDA 6.1/6.3/6.5 y reclutamiento masivo. Sede en Puebla, cobertura nacional."
   },
   "Header": {
+    "logoAlt": "Parallelo Consultoría",
     "tagline": "Cumplimiento y Prevención",
     "nav": {
       "services": "Servicios",
@@ -16,6 +17,7 @@
     "menuClose": "Cerrar menú"
   },
   "Hero": {
+    "imageAlt": "Profesional con casco y tableta, representando cumplimiento laboral y operaciones industriales",
     "tag": "Cumplimiento · Calidad · Talento",
     "titleBefore": "Diagnóstico de Cumplimiento Laboral, ",
     "titleHighlight": "preparación VDA",
@@ -310,6 +312,7 @@
     "invalidEmail": "Ingrese un correo válido"
   },
   "Footer": {
+    "logoAlt": "Parallelo Consultoría",
     "description": "Consultoría especializada en cumplimiento preventivo, preparación para auditorías VDA y reclutamiento estratégico.",
     "tagline": "Prevenimos riesgos, garantizamos cumplimiento, protegemos tu empresa.",
     "columns": {

@@ -19,15 +19,18 @@
 }
 
 .logoLink {
-  display: inline-block;
+  display: block;
+  line-height: 0;
   text-decoration: none;
   margin-bottom: 8px;
 }
 
 .logo {
-  height: 22px;
-  width: auto;
+  width: auto !important;
+  height: 32px !important;
+  max-width: 100%;
   display: block;
+  object-fit: contain;
 }
 
 .description {

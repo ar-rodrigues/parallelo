@@ -1,8 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { Logo } from "@/components/svg/Logo";
 import { PrivacyLinkButton } from "@/components/ui/PrivacyModal";
 import { useGoHome } from "@/hooks/useGoHome";
 import styles from "./Footer.module.css";
@@ -23,7 +23,14 @@ export function Footer() {
               aria-label="Ir al inicio"
               onClick={goHome}
             >
-              <Logo className={styles.logo} variant="light" />
+              <Image
+                src="/FOOTER_LOGO.webp"
+                alt={t("logoAlt")}
+                width={443}
+                height={135}
+                className={styles.logo}
+                style={{ width: "auto", height: 32 }}
+              />
             </Link>
             <p className={styles.description}>{t("description")}</p>
             <p className={styles.tagline}>&ldquo;{t("tagline")}&rdquo;</p>

@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { Logo } from "@/components/svg/Logo";
 import { useGoHome } from "@/hooks/useGoHome";
 import { useScrollShadow } from "@/hooks/useScrollShadow";
 import styles from "./Header.module.css";
@@ -34,7 +34,15 @@ export function Header() {
             goHome(e);
           }}
         >
-          <Logo className={styles.logo} variant="dark" />
+          <Image
+            src="/navbar_logo.webp"
+            alt={t("logoAlt")}
+            width={577}
+            height={140}
+            className={styles.logo}
+            style={{ width: "auto", height: 28 }}
+            priority
+          />
           <span className={styles.tagline}>{t("tagline")}</span>
         </Link>
 

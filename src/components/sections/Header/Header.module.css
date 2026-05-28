@@ -34,8 +34,10 @@
 }
 
 .logo {
-  height: 28px;
-  width: auto;
+  width: auto !important;
+  height: 28px !important;
+  display: block;
+  object-fit: contain;
 }
 
 .tagline {
@@ -152,8 +154,4 @@
     pointer-events: auto;
   }
 
-  .nav .btn-primary {
-    width: 100%;
-    text-align: center;
-  }
 }

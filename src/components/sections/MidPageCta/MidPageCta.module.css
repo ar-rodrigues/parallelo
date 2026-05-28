@@ -40,3 +40,18 @@
   padding: 12px 24px;
   font-size: 12px;
 }
+
+@media (max-width: 640px) {
+  .inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .text {
+    max-width: none;
+  }
+
+  .cta {
+    white-space: normal;
+  }
+}

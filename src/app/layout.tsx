@@ -35,7 +35,7 @@ export default function RootLayout({
     <html
       lang="es"
       data-scroll-behavior="smooth"
-      className={`${barlow.variable} ${barlowCondensed.variable} h-full antialiased`}
+      className={`${barlow.variable} ${barlowCondensed.variable} scrollbar-hidden h-full overflow-y-auto overflow-x-clip antialiased`}
     >
       <head>
         <link
@@ -44,7 +44,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="scrollbar-hidden min-h-full flex flex-col overflow-x-clip">
         <AntdRegistry>
           <ConfigProvider theme={antdTheme}>
             <NextIntlClientProvider>{children}</NextIntlClientProvider>

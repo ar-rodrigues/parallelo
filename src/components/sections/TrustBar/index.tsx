@@ -16,9 +16,9 @@ export async function TrustBar() {
       <div className={styles.inner}>
         {ITEMS.flatMap(({ key, icon }, index) => {
           const pill = (
-            <span key={key} className={styles.item}>
+            <span key={key} className={styles.item} data-key={key}>
               <i className={`ti ${icon}`} aria-hidden="true" />
-              {t(`items.${key}`)}
+              <span className={styles.itemLabel}>{t(`items.${key}`)}</span>
             </span>
           );
           if (index === 0) return [pill];

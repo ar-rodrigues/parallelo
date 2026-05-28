@@ -50,7 +50,10 @@ function ServicePanel({
           </li>
         ))}
       </ul>
-      <a href={`#contacto?servicio=${id}`} className="btn-primary">
+      <a
+        href={`#contacto?servicio=${id}`}
+        className={`btn-primary ${styles.panelCta}`}
+      >
         {t(`${id}.cta`)}
       </a>
     </div>
