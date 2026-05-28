@@ -62,7 +62,7 @@ export function Hero() {
           </div>
           <div className={styles.visual}>
             <Image
-              src="/hero_image.jpeg"
+              src="/Assets_Landing_Parallelo.png"
               alt={t("imageAlt")}
               width={967}
               height={929}

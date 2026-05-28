@@ -5,7 +5,7 @@ export function JsonLd() {
     name: "Parallelo Consultoría",
     description:
       "Consultoría en cumplimiento preventivo STPS, auditorías VDA y reclutamiento estratégico.",
-    image: "https://www.parallelo.com.mx/hero_image.jpeg",
+    image: "https://www.parallelo.com.mx/Assets_Landing_Parallelo.png",
     url: "https://www.parallelo.com.mx",
     telephone: ["+522225340548", "+522222580786"],
     email: "contacto@paralleloconsultoria.com",

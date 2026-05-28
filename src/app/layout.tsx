@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   description:
     "Consultoría en cumplimiento preventivo STPS, auditorías VDA y reclutamiento estratégico.",
   icons: {
-    icon: "/hero_image.jpeg",
-    apple: "/hero_image.jpeg",
+    icon: "/Flavicon-02.webp",
+    apple: "/Flavicon-02.webp",
   },
 };
 

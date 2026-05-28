@@ -17,10 +17,12 @@ export function generateStaticParams() {
 }
 
 const HERO_IMAGE = {
-  path: "/hero_image.jpeg",
+  path: "/Assets_Landing_Parallelo.png",
   width: 967,
   height: 929,
 } as const;
+
+const FAVICON_PATH = "/Flavicon-02.webp" as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -38,8 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("title"),
     description: t("description"),
     icons: {
-      icon: HERO_IMAGE.path,
-      apple: HERO_IMAGE.path,
+      icon: FAVICON_PATH,
+      apple: FAVICON_PATH,
     },
     openGraph: {
       title: t("title"),
