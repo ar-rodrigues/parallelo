@@ -18,7 +18,7 @@ export function generateStaticParams() {
 
 const FAVICON_PATH = "/Flavicon-02.webp" as const;
 const SHARE_IMAGE = {
-  url: "https://www.parallelo.com.mx/Assets_Landing_Parallelo.png",
+  url: "https://www.paralleloconsultoria.com/Assets_Landing_Parallelo.png",
   width: 2083,
   height: 2083,
   alt: "Parallelo Consultoría",
