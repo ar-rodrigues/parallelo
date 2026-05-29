@@ -10,7 +10,7 @@ import { Coverage } from "@/components/sections/Coverage";
 import { Team } from "@/components/sections/Team";
 import { BrandEmployer } from "@/components/sections/BrandEmployer";
 import { FinalCta } from "@/components/sections/FinalCta";
-import { ContactForm } from "@/components/sections/ContactForm";
+import { LazyContactForm } from "@/components/sections/ContactForm/LazyContactForm";
 import { Footer } from "@/components/sections/Footer";
 
 type Props = {
@@ -35,7 +35,7 @@ export default async function HomePage({ params }: Props) {
         <Team />
         <BrandEmployer />
         <FinalCta />
-        <ContactForm />
+        <LazyContactForm />
       </main>
       <Footer />
     </>

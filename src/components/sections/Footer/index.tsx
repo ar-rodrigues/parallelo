@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { Icon } from "@/components/ui/Icon";
 import { PrivacyLinkButton } from "@/components/ui/PrivacyModal";
 import { useGoHome } from "@/hooks/useGoHome";
 import styles from "./Footer.module.css";
@@ -97,7 +98,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="ti ti-brand-facebook" aria-hidden="true" />
+              <Icon name="brand-facebook" className={styles.socialIcon} />
               {t("social.facebook")}
             </a>
             <a
@@ -106,7 +107,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="ti ti-brand-linkedin" aria-hidden="true" />
+              <Icon name="brand-linkedin" className={styles.socialIcon} />
               {t("social.linkedin")}
             </a>
             <a
@@ -115,7 +116,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="ti ti-brand-instagram" aria-hidden="true" />
+              <Icon name="brand-instagram" className={styles.socialIcon} />
               {t("social.instagram")}
             </a>
           </div>

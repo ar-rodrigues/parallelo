@@ -6,6 +6,7 @@ import Input from "antd/es/input";
 import Select from "antd/es/select";
 import Checkbox from "antd/es/checkbox";
 import Button from "antd/es/button";
+import { Icon } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { PrivacyLinkButton } from "@/components/ui/PrivacyModal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -122,7 +123,7 @@ export function ContactForm() {
     return (
       <Section id="contacto" variant="alt">
         <div className={styles.success}>
-          <i className="ti ti-circle-check" aria-hidden="true" />
+          <Icon name="circle-check" className={styles.successIcon} />
           <p>{t("success")}</p>
         </div>
       </Section>

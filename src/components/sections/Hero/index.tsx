@@ -1,34 +1,10 @@
-"use client";
-
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { useCountUp } from "@/hooks/useCountUp";
+import { getTranslations } from "next-intl/server";
+import { HeroStats } from "./HeroStats";
 import styles from "./Hero.module.css";
 
-const STAT_KEYS = ["experience", "services", "coverage"] as const;
-
-function HeroStat({
-  statKey,
-}: {
-  statKey: (typeof STAT_KEYS)[number];
-}) {
-  const t = useTranslations("Hero.stats");
-  const value = Number(t(`${statKey}.value`));
-  const suffix = t(`${statKey}.suffix`);
-  const { ref, display } = useCountUp({ target: value, suffix });
-
-  return (
-    <div className={styles.stat}>
-      <span ref={ref} className={styles.statValue}>
-        {display}
-      </span>
-      <span className={styles.statLabel}>{t(`${statKey}.label`)}</span>
-    </div>
-  );
-}
-
-export function Hero() {
-  const t = useTranslations("Hero");
+export async function Hero() {
+  const t = await getTranslations("Hero");
 
   return (
     <section className={styles.hero}>
@@ -62,20 +38,17 @@ export function Hero() {
           </div>
           <div className={styles.visual}>
             <Image
-              src="/Assets_Landing_Parallelo.png"
+              src="/Assets_Landing_Parallelo.webp"
               alt={t("imageAlt")}
               width={967}
               height={929}
               className={styles.heroImage}
+              sizes="(max-width: 640px) 200px, (max-width: 900px) 260px, 440px"
               priority
             />
           </div>
         </div>
-        <div className={styles.stats}>
-          {STAT_KEYS.map((key) => (
-            <HeroStat key={key} statKey={key} />
-          ))}
-        </div>
+        <HeroStats />
       </div>
     </section>
   );

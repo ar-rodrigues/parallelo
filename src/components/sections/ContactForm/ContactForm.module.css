@@ -96,10 +96,12 @@
   color: var(--p-green);
 }
 
-.success i {
-  font-size: 3rem;
+.successIcon {
+  width: 3rem;
+  height: 3rem;
   display: block;
-  margin-bottom: var(--spacing-md);
+  margin: 0 auto var(--spacing-md);
+  color: var(--p-green);
 }
 
 .success p {

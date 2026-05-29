@@ -143,8 +143,10 @@
   color: var(--p-green);
 }
 
-.socialLink i {
-  font-size: 15px;
+.socialIcon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {

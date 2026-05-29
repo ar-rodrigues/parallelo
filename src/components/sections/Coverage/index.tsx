@@ -1,14 +1,15 @@
 import { getTranslations } from "next-intl/server";
+import { Icon, type TablerIconName } from "@/components/ui/Icon";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import styles from "./Coverage.module.css";
 
 const SECTOR_KEYS = ["industrial", "commercial", "services"] as const;
 const SECTOR_ICONS = {
-  industrial: "ti-building-factory",
-  commercial: "ti-shopping-bag",
-  services: "ti-briefcase",
-} as const;
+  industrial: "building-factory",
+  commercial: "shopping-bag",
+  services: "briefcase",
+} as const satisfies Record<(typeof SECTOR_KEYS)[number], TablerIconName>;
 const POSITION_KEYS = ["0", "1", "2", "3"] as const;
 
 export async function Coverage() {
@@ -27,7 +28,7 @@ export async function Coverage() {
         {SECTOR_KEYS.map((key) => (
           <div key={key} className={styles.sectorCard}>
             <div className={styles.sectorIcon}>
-              <i className={`ti ${SECTOR_ICONS[key]}`} aria-hidden="true" />
+              <Icon name={SECTOR_ICONS[key]} className={styles.sectorIconSvg} />
             </div>
             <h3 className={styles.sectorName}>{t(`sectors.${key}.title`)}</h3>
             <p className={styles.sectorDesc}>{t(`sectors.${key}.desc`)}</p>
@@ -46,7 +47,7 @@ export async function Coverage() {
           </div>
         </div>
         <div className={styles.location}>
-          <i className="ti ti-map-pin" aria-hidden="true" />
+          <Icon name="map-pin" className={styles.locationIcon} />
           <div>
             <div className={styles.locationHq}>{t("location.hq")}</div>
             <div className={styles.locationCoverage}>{t("location.coverage")}</div>

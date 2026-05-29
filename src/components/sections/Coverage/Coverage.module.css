@@ -33,8 +33,9 @@
   margin-bottom: 8px;
 }
 
-.sectorIcon i {
-  font-size: 16px;
+.sectorIconSvg {
+  width: 16px;
+  height: 16px;
   color: var(--p-green);
 }
 
@@ -97,9 +98,11 @@
   gap: 6px;
 }
 
-.location i {
+.locationIcon {
+  width: 20px;
+  height: 20px;
   color: var(--p-green);
-  font-size: 20px;
+  flex-shrink: 0;
 }
 
 .locationHq {

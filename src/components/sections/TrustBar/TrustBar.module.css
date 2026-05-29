@@ -28,8 +28,9 @@
   font-weight: 500;
 }
 
-.item i {
-  font-size: 13px;
+.itemIcon {
+  width: 13px;
+  height: 13px;
   color: var(--p-green);
   flex-shrink: 0;
 }

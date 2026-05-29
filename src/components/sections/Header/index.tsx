@@ -41,7 +41,6 @@ export function Header() {
             height={140}
             className={styles.logo}
             style={{ width: "auto", height: 28 }}
-            priority
           />
         </Link>
 
