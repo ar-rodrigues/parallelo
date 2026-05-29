@@ -1,4 +1,10 @@
 export function JsonLd() {
+  const services = [
+    "Cumplimiento Preventivo STPS",
+    "Auditorías VDA",
+    "Reclutamiento",
+  ] as const;
+
   const data = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -20,12 +26,25 @@ export function JsonLd() {
       addressRegion: "Puebla",
       addressCountry: "MX",
     },
-    areaServed: "MX",
-    serviceType: [
-      "Cumplimiento Preventivo STPS",
-      "Auditorías VDA",
-      "Reclutamiento",
-    ],
+    areaServed: {
+      "@type": "Country",
+      name: "MX",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicios de Parallelo Consultoría",
+      itemListElement: services.map((name) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name,
+          areaServed: {
+            "@type": "Country",
+            name: "MX",
+          },
+        },
+      })),
+    },
   };
 
   return (
