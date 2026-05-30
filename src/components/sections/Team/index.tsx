@@ -4,7 +4,14 @@ import styles from "./Team.module.css";
 
 const DIFF_KEYS = ["0", "1", "2", "3", "4", "5"] as const;
 const MEMBER_KEYS = ["dinorah", "ezequiel"] as const;
-const TAG_COUNT = 4;
+const JUNIOR_MEMBER_KEYS = ["paula"] as const;
+const EXPERT_TAG_COUNTS: Record<(typeof MEMBER_KEYS)[number], number> = {
+  dinorah: 5,
+  ezequiel: 4,
+};
+const JUNIOR_TAG_COUNTS: Record<(typeof JUNIOR_MEMBER_KEYS)[number], number> = {
+  paula: 6,
+};
 
 export async function Team() {
   const t = await getTranslations("Team");
@@ -36,11 +43,41 @@ export async function Team() {
               <h4 className={styles.memberName}>{t(`members.${key}.name`)}</h4>
               <p className={styles.memberRole}>{t(`members.${key}.role`)}</p>
               <div className={styles.memberTags}>
-                {Array.from({ length: TAG_COUNT }, (_, i) => (
+                {Array.from({ length: EXPERT_TAG_COUNTS[key] }, (_, i) => (
                   <span key={i} className={styles.tag}>
                     {t(`members.${key}.tags.${i}`)}
                   </span>
                 ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h3 className={`${styles.teamHeading} ${styles.juniorTeamHeading}`}>
+        {t("juniorTeamHeading")}
+      </h3>
+      <div className={styles.juniorTeamGrid}>
+        {JUNIOR_MEMBER_KEYS.map((key) => (
+          <div key={key} className={styles.memberCard}>
+            <div className={styles.initials} aria-hidden="true">
+              {t(`juniorMembers.${key}.initials`)}
+            </div>
+            <div>
+              <h4 className={styles.memberName}>
+                {t(`juniorMembers.${key}.name`)}
+              </h4>
+              <p className={styles.memberRole}>
+                {t(`juniorMembers.${key}.role`)}
+              </p>
+              <div className={styles.memberTags}>
+                {Array.from(
+                  { length: JUNIOR_TAG_COUNTS[key] },
+                  (_, i) => (
+                    <span key={i} className={styles.tag}>
+                      {t(`juniorMembers.${key}.tags.${i}`)}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
           </div>

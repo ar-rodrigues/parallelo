@@ -75,6 +75,17 @@
   gap: 12px;
 }
 
+.juniorTeamHeading {
+  margin-top: 28px;
+}
+
+.juniorTeamGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 360px;
+}
+
 .memberCard {
   background: rgba(255, 255, 255, 0.05);
   border: 0.5px solid rgba(255, 255, 255, 0.08);
@@ -131,5 +142,9 @@
   .diffGrid,
   .teamGrid {
     grid-template-columns: 1fr;
+  }
+
+  .juniorTeamGrid {
+    max-width: none;
   }
 }

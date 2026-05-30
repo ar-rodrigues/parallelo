@@ -21,7 +21,7 @@
     "titleBefore": "Diagnóstico de Cumplimiento Preventivo, ",
     "titleHighlight": "preparación VDA",
     "titleAfter": " y Reclutamiento Especializado",
-    "subtitle": "Evita multas ante la STPS, prepara a tu empresa para auditorías VDA y contrata talento que fortalezca tu operación.",
+    "subtitle": "Evita multas ante la STPS, prepara a tu empresa para las certificaciones VDA y contrata talento que fortalezca tu operación.",
     "ctaPrimary": "Solicitar diagnóstico preventivo",
     "ctaSecondary": "Conocer servicios",
     "micro": {
@@ -239,7 +239,8 @@
           "0": "+25 años experiencia",
           "1": "Cumplimiento STPS",
           "2": "Des. Organizacional",
-          "3": "Clima laboral"
+          "3": "Clima laboral",
+          "4": "Experiencia en reclutamiento"
         }
       },
       "ezequiel": {
@@ -251,6 +252,22 @@
           "1": "Auditorías VDA",
           "2": "Operaciones int'l",
           "3": "Ponente universitario"
+        }
+      }
+    },
+    "juniorTeamHeading": "Socio Junior",
+    "juniorMembers": {
+      "paula": {
+        "initials": "PN",
+        "name": "Paula Noriega Maceda",
+        "role": "Atracción de talento",
+        "tags": {
+          "0": "+5 años experiencia",
+          "1": "Headhunter",
+          "2": "Reclutamiento masivo",
+          "3": "Psicometrías",
+          "4": "Metodología STAR",
+          "5": "Employer branding"
         }
       }
     }
