@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import Input from "antd/es/input";
 import Select from "antd/es/select";
@@ -17,6 +17,11 @@ import {
   isValidPhone,
   sanitizePhoneInput,
 } from "@/lib/contactValidation";
+import {
+  consumeStoredContactServicio,
+  parseServicioFromHash,
+  subscribeToContactServicio,
+} from "@/lib/navigateToContact";
 import styles from "./ContactForm.module.css";
 
 const EMPLEADOS_KEYS = ["0", "1", "2", "3", "4"] as const;
@@ -55,13 +60,17 @@ const INITIAL: FormState = {
   website: "",
 };
 
+function resolveServicioParam(): string | undefined {
+  if (typeof window === "undefined") return undefined;
+  const fromHash = parseServicioFromHash(window.location.hash);
+  const fromStorage = consumeStoredContactServicio();
+  const param = fromHash ?? fromStorage;
+  return param && SERVICIO_MAP[param] ? param : undefined;
+}
+
 function getInitialFormState(): FormState {
-  if (typeof window === "undefined") return INITIAL;
-  const match = window.location.hash.match(/[?&]servicio=(\w+)/);
-  const param = match?.[1];
-  if (param && SERVICIO_MAP[param]) {
-    return { ...INITIAL, servicio: SERVICIO_MAP[param] };
-  }
+  const servicio = resolveServicioParam();
+  if (servicio) return { ...INITIAL, servicio };
   return INITIAL;
 }
 
@@ -70,6 +79,27 @@ export function ContactForm() {
   const [form, setForm] = useState<FormState>(getInitialFormState);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  useEffect(() => {
+    const applyServicio = (servicio: string) => {
+      if (SERVICIO_MAP[servicio]) {
+        setForm((f) => ({ ...f, servicio }));
+      }
+    };
+
+    const param = resolveServicioParam();
+    if (param) applyServicio(param);
+
+    if (window.location.hash.startsWith("#contacto")) {
+      document.getElementById("contacto")?.scrollIntoView({ block: "start" });
+      const base = `${window.location.pathname}${window.location.search}`;
+      if (window.location.hash !== "#contacto") {
+        window.history.replaceState(null, "", `${base}#contacto`);
+      }
+    }
+
+    return subscribeToContactServicio(applyServicio);
+  }, []);
 
   const set =
     (field: keyof FormState) =>

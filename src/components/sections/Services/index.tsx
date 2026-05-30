@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { navigateToContact } from "@/lib/navigateToContact";
 import styles from "./Services.module.css";
 
 const TABS = [
@@ -51,8 +52,12 @@ function ServicePanel({
         ))}
       </ul>
       <a
-        href={`#contacto?servicio=${id}`}
+        href="#contacto"
         className={`btn-primary ${styles.panelCta}`}
+        onClick={(e) => {
+          e.preventDefault();
+          navigateToContact(id);
+        }}
       >
         {t(`${id}.cta`)}
       </a>
