@@ -6,7 +6,20 @@ import { Link } from "@/i18n/navigation";
 import { Icon } from "@/components/ui/Icon";
 import { PrivacyLinkButton } from "@/components/ui/PrivacyModal";
 import { useGoHome } from "@/hooks/useGoHome";
+import {
+  navigateToService,
+  type ServiceTabId,
+} from "@/lib/navigateToService";
 import styles from "./Footer.module.css";
+
+const SERVICE_LINKS: { tab: ServiceTabId; labelKey: "stps" | "vda" | "rec" }[] =
+  [
+    { tab: "stps", labelKey: "stps" },
+    { tab: "vda", labelKey: "vda" },
+    { tab: "rec", labelKey: "rec" },
+  ];
+
+const PHONE_KEYS = ["dinorah", "ezequiel"] as const;
 
 export function Footer() {
   const t = useTranslations("Footer");
@@ -39,15 +52,19 @@ export function Footer() {
           <div className={styles.linksCol}>
             <div className={styles.colTitle}>{t("columns.services")}</div>
             <ul className={styles.links}>
-              <li>
-                <a href="#servicios">{t("links.stps")}</a>
-              </li>
-              <li>
-                <a href="#servicios">{t("links.vda")}</a>
-              </li>
-              <li>
-                <a href="#servicios">{t("links.rec")}</a>
-              </li>
+              {SERVICE_LINKS.map(({ tab, labelKey }) => (
+                <li key={tab}>
+                  <a
+                    href="#servicios"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigateToService(tab);
+                    }}
+                  >
+                    {t(`links.${labelKey}`)}
+                  </a>
+                </li>
+              ))}
             </ul>
             <div className={`${styles.colTitle} ${styles.colTitleSpaced}`}>
               {t("columns.company")}
@@ -68,12 +85,19 @@ export function Footer() {
           </div>
           <div className={styles.contactCol}>
             <div className={styles.colTitle}>{t("columns.contact")}</div>
-            <p className={styles.contactItem}>
-              {t("phones.dinorah.label")}: {t("phones.dinorah.number")}
-            </p>
-            <p className={styles.contactItem}>
-              {t("phones.ezequiel.label")}: {t("phones.ezequiel.number")}
-            </p>
+            {PHONE_KEYS.map((key) => (
+              <p key={key} className={styles.contactItem}>
+                {t(`phones.${key}.label`)}:{" "}
+                <a
+                  href={t(`phones.${key}.whatsappUrl`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t(`phones.${key}.whatsappAria`)}
+                >
+                  {t(`phones.${key}.number`)}
+                </a>
+              </p>
+            ))}
             <p className={styles.contactItem}>
               <a href={`mailto:${t("email")}`}>{t("email")}</a>
             </p>

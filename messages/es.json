@@ -349,8 +349,18 @@
       "privacy": "Aviso de privacidad"
     },
     "phones": {
-      "dinorah": { "label": "Dinorah", "number": "222 534 05 48" },
-      "ezequiel": { "label": "Ezequiel", "number": "222 258 07 86" }
+      "dinorah": {
+        "label": "Dinorah",
+        "number": "222 534 05 48",
+        "whatsappUrl": "https://wa.me/522225340548",
+        "whatsappAria": "Contactar a Dinorah por WhatsApp"
+      },
+      "ezequiel": {
+        "label": "Ezequiel",
+        "number": "222 258 07 86",
+        "whatsappUrl": "https://wa.me/522222580786",
+        "whatsappAria": "Contactar a Ezequiel por WhatsApp"
+      }
     },
     "email": "contacto@paralleloconsultoria.com",
     "coverage": {

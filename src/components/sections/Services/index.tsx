@@ -1,10 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { navigateToContact } from "@/lib/navigateToContact";
+import {
+  resolveServiceTab,
+  subscribeToServiceTab,
+  type ServiceTabId,
+} from "@/lib/navigateToService";
 import styles from "./Services.module.css";
 
 const TABS = [
@@ -65,9 +70,30 @@ function ServicePanel({
   );
 }
 
+function getInitialServiceTab(): ServiceTabId {
+  return resolveServiceTab() ?? "stps";
+}
+
 export function Services() {
   const t = useTranslations("Services");
-  const [active, setActive] = useState<(typeof TABS)[number]["id"]>("stps");
+  const [active, setActive] = useState<ServiceTabId>(getInitialServiceTab);
+
+  useEffect(() => {
+    const applyTab = (tab: ServiceTabId) => setActive(tab);
+
+    const tab = resolveServiceTab();
+    if (tab) applyTab(tab);
+
+    if (window.location.hash.startsWith("#servicios")) {
+      document.getElementById("servicios")?.scrollIntoView({ block: "start" });
+      const base = `${window.location.pathname}${window.location.search}`;
+      if (window.location.hash !== "#servicios") {
+        window.history.replaceState(null, "", `${base}#servicios`);
+      }
+    }
+
+    return subscribeToServiceTab(applyTab);
+  }, []);
 
   return (
     <Section id="servicios" variant="light">
