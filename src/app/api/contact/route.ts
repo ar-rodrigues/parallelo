@@ -21,7 +21,7 @@ interface ContactBody {
 
 const SERVICIO_LABELS: Record<string, string> = {
   stps: "Cumplimiento Preventivo STPS",
-  vda: "Auditorías VDA",
+  vda: "Certificaciones VDA",
   rec: "Reclutamiento",
 };
 

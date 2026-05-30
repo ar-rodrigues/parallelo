@@ -1,7 +1,7 @@
 export function JsonLd() {
   const services = [
     "Cumplimiento Preventivo STPS",
-    "Auditorías VDA",
+    "Certificaciones VDA",
     "Reclutamiento",
   ] as const;
 
@@ -10,7 +10,7 @@ export function JsonLd() {
     "@type": "ProfessionalService",
     name: "Parallelo Consultoría",
     description:
-      "Consultoría en cumplimiento preventivo STPS, auditorías VDA y reclutamiento estratégico.",
+      "Consultoría en cumplimiento preventivo STPS, certificaciones VDA y reclutamiento estratégico.",
     image: "https://www.paralleloconsultoria.com/Assets_Landing_Parallelo.png",
     url: "https://www.paralleloconsultoria.com/es",
     telephone: ["+522225340548", "+522222580786"],

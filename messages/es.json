@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Parallelo | Cumplimiento Preventivo, Auditorías VDA y Reclutamiento — Puebla, México",
-    "description": "Consultoría especializada en diagnóstico de cumplimiento preventivo STPS, preparación para auditorías VDA 6.1/6.3/6.5 y reclutamiento masivo. Sede en Puebla, cobertura nacional."
+    "title": "Parallelo | Cumplimiento Preventivo, Certificaciones VDA y Reclutamiento — Puebla, México",
+    "description": "Consultoría especializada en diagnóstico de cumplimiento preventivo STPS, preparación para certificaciones VDA 6.1/6.3/6.5 y reclutamiento masivo. Sede en Puebla, cobertura nacional."
   },
   "Header": {
     "logoAlt": "Parallelo Consultoría",
@@ -94,7 +94,7 @@
     "subtitle": "Selecciona el servicio para conocer más detalle.",
     "tabs": {
       "stps": "Cumplimiento STPS",
-      "vda": "Auditorías VDA",
+      "vda": "Certificaciones VDA",
       "rec": "Reclutamiento"
     },
     "stps": {
@@ -122,7 +122,7 @@
         "2": "VDA 6.5",
         "3": "Industria Automotriz"
       },
-      "title": "Preparación para Auditorías VDA",
+      "title": "Preparación para certificaciones VDA",
       "subtitle": "Mantén tu certificación y protege tu acceso a la Unión Europea",
       "body": "En apego a los lineamientos de la VDA (Verband der Automobilindustrie), fortalecemos sistemas de aseguramiento de calidad. Una NO RECOMENDACIÓN implica NO certificación, cerrando la puerta de exportación a la UE.",
       "checks": {
@@ -249,7 +249,7 @@
         "role": "Consultor en Aseguramiento de Calidad",
         "tags": {
           "0": "+35 años en Volkswagen",
-          "1": "Auditorías VDA",
+          "1": "Certificaciones VDA",
           "2": "Operaciones internacionales",
           "3": "Ponente universitario"
         }
@@ -314,7 +314,7 @@
     },
     "servicioOptions": {
       "stps": "Cumplimiento Preventivo STPS",
-      "vda": "Auditorías VDA",
+      "vda": "Certificaciones VDA",
       "rec": "Reclutamiento",
       "all": "Todos los servicios"
     },
@@ -331,7 +331,7 @@
   },
   "Footer": {
     "logoAlt": "Parallelo Consultoría",
-    "description": "Consultoría especializada en cumplimiento preventivo, preparación para auditorías VDA y reclutamiento estratégico.",
+    "description": "Consultoría especializada en cumplimiento preventivo, preparación para certificaciones VDA y reclutamiento estratégico.",
     "tagline": "Prevenimos riesgos, garantizamos cumplimiento, protegemos tu empresa.",
     "columns": {
       "services": "Servicios",
@@ -341,7 +341,7 @@
     },
     "links": {
       "stps": "Cumplimiento Preventivo STPS",
-      "vda": "Auditorías VDA",
+      "vda": "Certificaciones VDA",
       "rec": "Reclutamiento",
       "home": "Inicio",
       "coverage": "Cobertura",
