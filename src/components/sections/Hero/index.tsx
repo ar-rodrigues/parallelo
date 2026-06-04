@@ -40,11 +40,12 @@ export async function Hero() {
             <Image
               src="/Assets_Landing_Parallelo.webp"
               alt={t("imageAlt")}
-              width={967}
-              height={929}
+              width={2083}
+              height={2083}
               className={styles.heroImage}
               sizes="(max-width: 640px) 200px, (max-width: 900px) 260px, 440px"
               priority
+              unoptimized
             />
           </div>
         </div>

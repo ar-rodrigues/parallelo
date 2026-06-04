@@ -28,7 +28,8 @@ const SHARE_IMAGE = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const canonicalUrl = `${BASE_URL}/${locale}`;
+  const canonicalUrl =
+    locale === routing.defaultLocale ? BASE_URL : `${BASE_URL}/${locale}`;
 
   return {
     title: t("title"),
