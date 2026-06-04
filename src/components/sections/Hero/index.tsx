@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { PictureImage } from "@/components/ui/PictureImage";
 import { HeroStats } from "./HeroStats";
 import styles from "./Hero.module.css";
 
@@ -37,15 +37,15 @@ export async function Hero() {
             </p>
           </div>
           <div className={styles.visual}>
-            <Image
-              src="/Assets_Landing_Parallelo.webp"
+            <PictureImage
+              webpSrc="/Assets_Landing_Parallelo.webp"
+              pngSrc="/Assets_Landing_Parallelo.png"
               alt={t("imageAlt")}
               width={2083}
               height={2083}
               className={styles.heroImage}
               sizes="(max-width: 640px) 200px, (max-width: 900px) 260px, 440px"
               priority
-              unoptimized
             />
           </div>
         </div>

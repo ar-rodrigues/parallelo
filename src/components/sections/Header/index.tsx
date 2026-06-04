@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { PictureImage } from "@/components/ui/PictureImage";
 import { useGoHome } from "@/hooks/useGoHome";
 import { useScrollShadow } from "@/hooks/useScrollShadow";
 import styles from "./Header.module.css";
@@ -34,11 +34,12 @@ export function Header() {
             goHome(e);
           }}
         >
-          <Image
-            src="/navbar_logo.webp"
+          <PictureImage
+            webpSrc="/header_logo.webp"
+            pngSrc="/header_logo.png"
             alt={t("logoAlt")}
-            width={577}
-            height={140}
+            width={2466}
+            height={592}
             className={styles.logo}
             style={{ width: "auto", height: 28 }}
           />

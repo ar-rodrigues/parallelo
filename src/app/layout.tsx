@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
+import { siteIcons, siteManifest, SITE_URL } from "@/config/site";
 import "./globals.css";
 
 const barlow = Barlow({
@@ -17,7 +18,7 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.paralleloconsultoria.com"),
+  metadataBase: new URL(SITE_URL),
   title: "Parallelo",
   description:
     "Consultoría en cumplimiento preventivo STPS, certificaciones VDA y reclutamiento estratégico.",
@@ -44,10 +45,8 @@ export const metadata: Metadata = {
       "Consultoría en cumplimiento preventivo STPS, certificaciones VDA y reclutamiento estratégico.",
     images: ["https://www.paralleloconsultoria.com/Assets_Landing_Parallelo.png"],
   },
-  icons: {
-    icon: "/Flavicon-02.webp",
-    apple: "/Flavicon-02.webp",
-  },
+  icons: siteIcons,
+  manifest: siteManifest,
 };
 
 export default function RootLayout({

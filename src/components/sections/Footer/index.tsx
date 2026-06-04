@@ -1,8 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { PictureImage } from "@/components/ui/PictureImage";
 import { Icon } from "@/components/ui/Icon";
 import { PrivacyLinkButton } from "@/components/ui/PrivacyModal";
 import { useGoHome } from "@/hooks/useGoHome";
@@ -37,11 +37,12 @@ export function Footer() {
               aria-label="Ir al inicio"
               onClick={goHome}
             >
-              <Image
-                src="/FOOTER_LOGO.webp"
+              <PictureImage
+                webpSrc="/footer_logo.webp"
+                pngSrc="/footer_logo.png"
                 alt={t("logoAlt")}
-                width={443}
-                height={135}
+                width={483}
+                height={149}
                 className={styles.logo}
                 style={{ width: "auto", height: 32 }}
               />

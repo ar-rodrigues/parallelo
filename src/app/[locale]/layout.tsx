@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { SITE_URL, siteIcons, siteManifest } from "@/config/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PrivacyModalProvider } from "@/components/ui/PrivacyModal";
 
@@ -16,10 +17,8 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-const BASE_URL = "https://www.paralleloconsultoria.com";
-const FAVICON_PATH = "/Flavicon-02.webp" as const;
 const SHARE_IMAGE = {
-  url: `${BASE_URL}/Assets_Landing_Parallelo.png`,
+  url: `${SITE_URL}/Assets_Landing_Parallelo.png`,
   width: 2083,
   height: 2083,
   alt: "Parallelo Consultoría",
@@ -29,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
   const canonicalUrl =
-    locale === routing.defaultLocale ? BASE_URL : `${BASE_URL}/${locale}`;
+    locale === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${locale}`;
 
   return {
     title: t("title"),
@@ -37,10 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: canonicalUrl,
     },
-    icons: {
-      icon: FAVICON_PATH,
-      apple: FAVICON_PATH,
-    },
+    icons: siteIcons,
+    manifest: siteManifest,
     openGraph: {
       title: t("title"),
       description: t("description"),
