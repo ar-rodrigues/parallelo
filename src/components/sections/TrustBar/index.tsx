@@ -1,5 +1,7 @@
+import { Fragment } from "react";
 import { getTranslations } from "next-intl/server";
 import { Icon, type TablerIconName } from "@/components/ui/Icon";
+import { Reveal } from "@/components/ui/Reveal";
 import styles from "./TrustBar.module.css";
 
 const ITEMS = [
@@ -15,21 +17,19 @@ export async function TrustBar() {
   return (
     <div className={styles.bar}>
       <div className={styles.inner}>
-        {ITEMS.flatMap(({ key, icon }, index) => {
-          const pill = (
-            <span key={key} className={styles.item} data-key={key}>
+        {ITEMS.map(({ key, icon }, index) => (
+          <Fragment key={key}>
+            {index > 0 && (
+              <span className={styles.sep} aria-hidden="true">
+                ·
+              </span>
+            )}
+            <Reveal as="span" className={styles.item} delay={index * 50}>
               <Icon name={icon} className={styles.itemIcon} />
               <span className={styles.itemLabel}>{t(`items.${key}`)}</span>
-            </span>
-          );
-          if (index === 0) return [pill];
-          return [
-            <span key={`sep-${key}`} className={styles.sep} aria-hidden="true">
-              ·
-            </span>,
-            pill,
-          ];
-        })}
+            </Reveal>
+          </Fragment>
+        ))}
       </div>
     </div>
   );

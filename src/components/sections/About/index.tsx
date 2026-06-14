@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import styles from "./About.module.css";
 
@@ -10,7 +11,7 @@ export async function About() {
   return (
     <Section id="nosotros" variant="default">
       <div className={styles.layout}>
-        <div className={styles.text}>
+        <Reveal className={styles.text}>
           <span className="section-label">{t("label")}</span>
           <h2 className={styles.title}>
             {t("titleBefore")}
@@ -22,8 +23,8 @@ export async function About() {
           <blockquote className={styles.quote}>
             &ldquo;{t("quote")}&rdquo;
           </blockquote>
-        </div>
-        <div className={styles.visual}>
+        </Reveal>
+        <Reveal className={styles.visual} delay={100}>
           {METRIC_KEYS.map((key, index) => (
             <div key={key}>
               {index > 0 && <div className={styles.divider} aria-hidden="true" />}
@@ -37,7 +38,7 @@ export async function About() {
               </div>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </Section>
   );

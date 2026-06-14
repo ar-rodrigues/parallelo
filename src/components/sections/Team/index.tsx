@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import styles from "./Team.module.css";
 
@@ -18,24 +19,38 @@ export async function Team() {
 
   return (
     <Section id="equipo" variant="dark">
-      <span className={`section-label ${styles.label}`}>{t("label")}</span>
-      <h2 className={styles.title}>{t("title")}</h2>
-      <p className={styles.subtitle}>{t("subtitle")}</p>
+      <Reveal className={styles.intro} staggerChildren>
+        <span className={`section-label ${styles.label}`}>{t("label")}</span>
+        <h2 className={styles.title}>{t("title")}</h2>
+        <p className={styles.subtitle}>{t("subtitle")}</p>
+      </Reveal>
       <div className={styles.diffGrid}>
-        {DIFF_KEYS.map((key) => (
-          <div key={key} className={styles.diffItem}>
+        {DIFF_KEYS.map((key, index) => (
+          <Reveal
+            key={key}
+            className={styles.diffItem}
+            delay={index * 80}
+            staggerChildren
+          >
             <span className={styles.diffNum}>{t(`diffs.${key}.num`)}</span>
             <div>
               <h3 className={styles.diffTitle}>{t(`diffs.${key}.title`)}</h3>
               <p className={styles.diffBody}>{t(`diffs.${key}.desc`)}</p>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
-      <h3 className={styles.teamHeading}>{t("teamHeading")}</h3>
+      <Reveal className={styles.teamHeadingReveal} delay={80}>
+        <h3 className={styles.teamHeading}>{t("teamHeading")}</h3>
+      </Reveal>
       <div className={styles.teamGrid}>
-        {MEMBER_KEYS.map((key) => (
-          <div key={key} className={styles.memberCard}>
+        {MEMBER_KEYS.map((key, index) => (
+          <Reveal
+            key={key}
+            className={styles.memberCard}
+            delay={index * 80}
+            staggerChildren
+          >
             <div className={styles.initials} aria-hidden="true">
               {t(`members.${key}.initials`)}
             </div>
@@ -50,15 +65,22 @@ export async function Team() {
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
-      <h3 className={`${styles.teamHeading} ${styles.juniorTeamHeading}`}>
-        {t("juniorTeamHeading")}
-      </h3>
+      <Reveal className={styles.teamHeadingReveal} delay={80}>
+        <h3 className={`${styles.teamHeading} ${styles.juniorTeamHeading}`}>
+          {t("juniorTeamHeading")}
+        </h3>
+      </Reveal>
       <div className={styles.juniorTeamGrid}>
-        {JUNIOR_MEMBER_KEYS.map((key) => (
-          <div key={key} className={styles.memberCard}>
+        {JUNIOR_MEMBER_KEYS.map((key, index) => (
+          <Reveal
+            key={key}
+            className={styles.memberCard}
+            delay={index * 80}
+            staggerChildren
+          >
             <div className={styles.initials} aria-hidden="true">
               {t(`juniorMembers.${key}.initials`)}
             </div>
@@ -80,7 +102,7 @@ export async function Team() {
                 )}
               </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </Section>

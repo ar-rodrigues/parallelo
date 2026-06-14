@@ -14,7 +14,7 @@ function HeroStat({
   const t = useTranslations("Hero.stats");
   const value = Number(t(`${statKey}.value`));
   const suffix = t(`${statKey}.suffix`);
-  const { ref, display } = useCountUp({ target: value, suffix });
+  const { ref, display } = useCountUp({ target: value, suffix, duration: 2500 });
 
   return (
     <div className={styles.stat}>

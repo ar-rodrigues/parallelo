@@ -42,11 +42,180 @@
 }
 
 .panel {
-  display: none;
+  display: block;
 }
 
-.panelActive {
-  display: block;
+@keyframes service-item-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(var(--animation-distance));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.servicesContent:not(.servicesRevealed) .heading :global(.section-label),
+.servicesContent:not(.servicesRevealed) .heading h2,
+.servicesContent:not(.servicesRevealed) .heading p,
+.servicesContent:not(.servicesRevealed) .tabs,
+.servicesContent:not(.servicesRevealed) .panelContent > .badgeRow,
+.servicesContent:not(.servicesRevealed) .panelContent > .panelTitle,
+.servicesContent:not(.servicesRevealed) .panelContent > .panelSub,
+.servicesContent:not(.servicesRevealed) .panelContent > .panelBody,
+.servicesContent:not(.servicesRevealed) .panelContent > .checks li,
+.servicesContent:not(.servicesRevealed) .panelContent > .panelCta {
+  opacity: 0;
+  transform: translateY(var(--animation-distance));
+}
+
+.servicesRevealed .heading :global(.section-label),
+.servicesRevealed .heading h2,
+.servicesRevealed .heading p,
+.servicesRevealed .tabs,
+.servicesRevealed .panelContent > .badgeRow,
+.servicesRevealed .panelContent > .panelTitle,
+.servicesRevealed .panelContent > .panelSub,
+.servicesRevealed .panelContent > .panelBody,
+.servicesRevealed .panelContent > .checks li,
+.servicesRevealed .panelContent > .panelCta {
+  animation: service-item-fade-up var(--animation-duration) var(--animation-ease) both;
+}
+
+.servicesRevealed .heading :global(.section-label) {
+  animation-delay: 0ms;
+}
+
+.servicesRevealed .heading h2 {
+  animation-delay: calc(var(--animation-stagger) * 1);
+}
+
+.servicesRevealed .heading p {
+  animation-delay: calc(var(--animation-stagger) * 2);
+}
+
+.servicesRevealed .tabs {
+  animation-delay: calc(var(--animation-stagger) * 3);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .badgeRow {
+  animation-delay: calc(var(--animation-stagger) * 4);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .panelTitle {
+  animation-delay: calc(var(--animation-stagger) * 5);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .panelSub {
+  animation-delay: calc(var(--animation-stagger) * 6);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .panelBody {
+  animation-delay: calc(var(--animation-stagger) * 7);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .checks li:nth-child(1) {
+  animation-delay: calc(var(--animation-stagger) * 8);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .checks li:nth-child(2) {
+  animation-delay: calc(var(--animation-stagger) * 9);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .checks li:nth-child(3) {
+  animation-delay: calc(var(--animation-stagger) * 10);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .checks li:nth-child(4) {
+  animation-delay: calc(var(--animation-stagger) * 11);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .checks li:nth-child(5) {
+  animation-delay: calc(var(--animation-stagger) * 12);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .checks li:nth-child(6) {
+  animation-delay: calc(var(--animation-stagger) * 13);
+}
+
+.servicesRevealed .panelContent[data-enter="scroll"] > .panelCta {
+  animation-delay: calc(var(--animation-stagger) * 14);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .badgeRow {
+  animation-delay: 0ms;
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .panelTitle {
+  animation-delay: calc(var(--animation-stagger) * 1);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .panelSub {
+  animation-delay: calc(var(--animation-stagger) * 2);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .panelBody {
+  animation-delay: calc(var(--animation-stagger) * 3);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .checks li:nth-child(1) {
+  animation-delay: calc(var(--animation-stagger) * 4);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .checks li:nth-child(2) {
+  animation-delay: calc(var(--animation-stagger) * 5);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .checks li:nth-child(3) {
+  animation-delay: calc(var(--animation-stagger) * 6);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .checks li:nth-child(4) {
+  animation-delay: calc(var(--animation-stagger) * 7);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .checks li:nth-child(5) {
+  animation-delay: calc(var(--animation-stagger) * 8);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .checks li:nth-child(6) {
+  animation-delay: calc(var(--animation-stagger) * 9);
+}
+
+.servicesRevealed .panelContent[data-enter="tab"] > .panelCta {
+  animation-delay: calc(var(--animation-stagger) * 10);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .servicesContent:not(.servicesRevealed) .heading :global(.section-label),
+  .servicesContent:not(.servicesRevealed) .heading h2,
+  .servicesContent:not(.servicesRevealed) .heading p,
+  .servicesContent:not(.servicesRevealed) .tabs,
+  .servicesContent:not(.servicesRevealed) .panelContent > .badgeRow,
+  .servicesContent:not(.servicesRevealed) .panelContent > .panelTitle,
+  .servicesContent:not(.servicesRevealed) .panelContent > .panelSub,
+  .servicesContent:not(.servicesRevealed) .panelContent > .panelBody,
+  .servicesContent:not(.servicesRevealed) .panelContent > .checks li,
+  .servicesContent:not(.servicesRevealed) .panelContent > .panelCta {
+    opacity: 1;
+    transform: none;
+  }
+
+  .servicesRevealed .heading :global(.section-label),
+  .servicesRevealed .heading h2,
+  .servicesRevealed .heading p,
+  .servicesRevealed .tabs,
+  .servicesRevealed .panelContent > .badgeRow,
+  .servicesRevealed .panelContent > .panelTitle,
+  .servicesRevealed .panelContent > .panelSub,
+  .servicesRevealed .panelContent > .panelBody,
+  .servicesRevealed .panelContent > .checks li,
+  .servicesRevealed .panelContent > .panelCta {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .badgeRow {

@@ -79,11 +79,21 @@ h4 {
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
-  transition: background var(--transition-fast);
+  transition:
+    background var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
 .btn-primary:hover {
   background: var(--p-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(60, 171, 63, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(60, 171, 63, 0.2);
 }
 
 .btn-secondary {
@@ -104,13 +114,22 @@ h4 {
   border-radius: var(--border-radius);
   cursor: pointer;
   transition:
-    border-color var(--transition-fast),
-    background var(--transition-fast);
+    border-color var(--transition-normal),
+    background var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
 .btn-secondary:hover {
   border-color: var(--p-white);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .btn-dark {
@@ -129,11 +148,21 @@ h4 {
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
-  transition: background var(--transition-fast);
+  transition:
+    background var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
 .btn-dark:hover {
   background: var(--p-charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-dark:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 640px) {
@@ -172,4 +201,22 @@ h4 {
   letter-spacing: 0.12em;
   color: var(--p-green);
   margin-bottom: var(--spacing-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-secondary:hover,
+  .btn-secondary:active,
+  .btn-dark:hover,
+  .btn-dark:active {
+    transform: none;
+  }
 }

@@ -80,7 +80,10 @@
   height: 2px;
   background: var(--p-black);
   position: relative;
-  transition: transform var(--transition-fast);
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    top 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 280ms ease;
 }
 
 .menuIcon::before,
@@ -129,18 +132,25 @@
     gap: var(--spacing-md);
     border-bottom: 1px solid var(--p-border);
     box-shadow: var(--shadow-md);
-    transform: translateY(-120%);
+    transform: translate3d(0, calc(-100% - 12px), 0);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transition:
-      transform var(--transition-normal),
-      opacity var(--transition-normal);
+      transform 480ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 360ms cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0s linear 480ms;
   }
 
   .navOpen {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
+    transition:
+      transform 480ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 360ms cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0s linear 0s;
   }
 
 }

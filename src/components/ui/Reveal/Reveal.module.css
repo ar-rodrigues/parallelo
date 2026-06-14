@@ -1,0 +1,81 @@
+.reveal {
+  opacity: 0;
+  transition:
+    opacity var(--animation-duration) var(--animation-ease),
+    transform var(--animation-duration) var(--animation-ease);
+  will-change: opacity, transform;
+}
+
+.fadeUp {
+  transform: translateY(var(--animation-distance));
+}
+
+.fadeIn {
+  transform: none;
+}
+
+.visible.fadeUp,
+.visible.fadeIn {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes reveal-child-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.staggerHost {
+  opacity: 1;
+  transform: none;
+}
+
+.staggerHost:not(.visible) > * {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.staggerHost.visible > * {
+  animation: reveal-child-fade-up var(--animation-duration) var(--animation-ease) both;
+}
+
+.staggerHost.visible > *:nth-child(1) {
+  animation-delay: calc(var(--reveal-base-delay, 0ms) + 0ms);
+}
+
+.staggerHost.visible > *:nth-child(2) {
+  animation-delay: calc(var(--reveal-base-delay, 0ms) + var(--animation-stagger));
+}
+
+.staggerHost.visible > *:nth-child(3) {
+  animation-delay: calc(var(--reveal-base-delay, 0ms) + calc(var(--animation-stagger) * 2));
+}
+
+.staggerHost.visible > *:nth-child(4) {
+  animation-delay: calc(var(--reveal-base-delay, 0ms) + calc(var(--animation-stagger) * 3));
+}
+
+.staggerHost.visible > *:nth-child(5) {
+  animation-delay: calc(var(--reveal-base-delay, 0ms) + calc(var(--animation-stagger) * 4));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .staggerHost:not(.visible) > *,
+  .staggerHost.visible > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}

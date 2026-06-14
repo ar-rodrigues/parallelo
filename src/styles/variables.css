@@ -74,4 +74,8 @@
   --shadow-nav: 0 1px 8px rgba(0, 0, 0, 0.1);
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
+  --animation-duration: 600ms;
+  --animation-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --animation-distance: 24px;
+  --animation-stagger: 80ms;
 }

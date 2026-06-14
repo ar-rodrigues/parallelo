@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Icon, type TablerIconName } from "@/components/ui/Icon";
+import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import styles from "./Coverage.module.css";
@@ -17,25 +18,32 @@ export async function Coverage() {
 
   return (
     <Section id="cobertura" variant="alt">
-      <SectionHeading
-        label={t("label")}
-        title={t("title")}
-        subtitle={t("subtitle")}
-        variant="default"
-        className={styles.heading}
-      />
+      <Reveal>
+        <SectionHeading
+          label={t("label")}
+          title={t("title")}
+          subtitle={t("subtitle")}
+          variant="default"
+          className={styles.heading}
+        />
+      </Reveal>
       <div className={styles.sectorGrid}>
-        {SECTOR_KEYS.map((key) => (
-          <div key={key} className={styles.sectorCard}>
+        {SECTOR_KEYS.map((key, index) => (
+          <Reveal
+            key={key}
+            className={styles.sectorCard}
+            delay={index * 80}
+            staggerChildren
+          >
             <div className={styles.sectorIcon}>
               <Icon name={SECTOR_ICONS[key]} className={styles.sectorIconSvg} />
             </div>
             <h3 className={styles.sectorName}>{t(`sectors.${key}.title`)}</h3>
             <p className={styles.sectorDesc}>{t(`sectors.${key}.desc`)}</p>
-          </div>
+          </Reveal>
         ))}
       </div>
-      <div className={styles.bottomBar}>
+      <Reveal className={styles.bottomBar} delay={240} staggerChildren>
         <div className={styles.positions}>
           <div className={styles.positionsTitle}>{t("positions.title")}</div>
           <div className={styles.positionChips}>
@@ -53,7 +61,7 @@ export async function Coverage() {
             <div className={styles.locationCoverage}>{t("location.coverage")}</div>
           </div>
         </div>
-      </div>
+      </Reveal>
     </Section>
   );
 }
