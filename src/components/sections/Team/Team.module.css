@@ -12,7 +12,7 @@
 }
 
 .subtitle {
-  font-size: 13px;
+  font-size: var(--text-body);
   color: rgba(255, 255, 255, 0.5);
   margin: 0 0 28px;
   max-width: 480px;
@@ -66,14 +66,14 @@
 }
 
 .diffTitle {
-  font-size: 12px;
+  font-size: var(--text-body-sm);
   font-weight: 600;
   color: var(--p-white);
   margin: 0 0 3px;
 }
 
 .diffBody {
-  font-size: 11px;
+  font-size: var(--text-label);
   color: rgba(255, 255, 255, 0.45);
   line-height: 1.5;
   margin: 0;
@@ -156,14 +156,14 @@
 }
 
 .memberName {
-  font-size: 13px;
+  font-size: var(--text-body);
   font-weight: 600;
   color: var(--p-white);
   margin: 0 0 2px;
 }
 
 .memberRole {
-  font-size: 11px;
+  font-size: var(--text-label);
   color: var(--p-green);
   font-weight: 500;
   margin: 0 0 8px;
@@ -176,7 +176,7 @@
 }
 
 .tag {
-  font-size: 9px;
+  font-size: var(--text-caption);
   color: rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.06);
   border: 0.5px solid rgba(255, 255, 255, 0.08);

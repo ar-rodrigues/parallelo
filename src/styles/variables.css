@@ -43,6 +43,10 @@
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
+  --text-caption: 0.75rem;
+  --text-label: 0.8125rem;
+  --text-body-sm: 0.875rem;
+  --text-body: 0.9375rem;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -67,6 +71,9 @@
   --border-radius-lg: 10px;
   --border-radius-xl: 16px;
   --container-max-width: 1200px;
+  --content-padding-x: var(--spacing-xl);
+  --layout-min-width: 375px;
+  --ui-scale: 1;
   --header-height: 72px;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -78,4 +85,61 @@
   --animation-ease: cubic-bezier(0.22, 1, 0.36, 1);
   --animation-distance: 24px;
   --animation-stagger: 80ms;
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --ui-scale: 1.08;
+    --container-max-width: clamp(1280px, 88vw, 1480px);
+    --content-padding-x: clamp(2rem, 3vw, 2.75rem);
+    --header-height: 76px;
+    --spacing-3xl: 4.25rem;
+    --spacing-4xl: 6.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-5xl: 3.25rem;
+    --text-caption: 0.8125rem;
+    --text-label: 0.875rem;
+    --text-body-sm: 0.9375rem;
+    --text-body: 1rem;
+    --animation-distance: 26px;
+  }
+}
+
+@media (min-width: 1680px) {
+  :root {
+    --ui-scale: 1.12;
+    --container-max-width: clamp(1360px, 86vw, 1580px);
+    --content-padding-x: clamp(2.25rem, 3.5vw, 3rem);
+    --header-height: 80px;
+    --spacing-3xl: 4.5rem;
+    --spacing-4xl: 7rem;
+    --font-size-3xl: 2.125rem;
+    --font-size-4xl: 2.625rem;
+    --font-size-5xl: 3.375rem;
+    --text-caption: 0.8125rem;
+    --text-label: 0.875rem;
+    --text-body-sm: 0.9375rem;
+    --text-body: 1rem;
+    --animation-distance: 28px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --ui-scale: 1.16;
+    --container-max-width: clamp(1440px, 84vw, 1680px);
+    --content-padding-x: clamp(2.5rem, 4vw, 3.25rem);
+    --header-height: 84px;
+    --spacing-3xl: 4.75rem;
+    --spacing-4xl: 7.5rem;
+    --font-size-3xl: 2.25rem;
+    --font-size-4xl: 2.75rem;
+    --font-size-5xl: 3.5rem;
+    --text-caption: 0.875rem;
+    --text-label: 0.9375rem;
+    --text-body-sm: 1rem;
+    --text-body: 1.0625rem;
+    --animation-distance: 30px;
+  }
 }

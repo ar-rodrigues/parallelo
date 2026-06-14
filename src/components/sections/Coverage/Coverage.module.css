@@ -50,14 +50,14 @@
 }
 
 .sectorName {
-  font-size: 13px;
+  font-size: var(--text-body);
   font-weight: 600;
   color: var(--p-black);
   margin: 0 0 4px;
 }
 
 .sectorDesc {
-  font-size: 11px;
+  font-size: var(--text-label);
   color: var(--p-muted);
   line-height: 1.4;
   margin: 0;
@@ -97,7 +97,7 @@
 }
 
 .positionsTitle {
-  font-size: 11px;
+  font-size: var(--text-label);
   font-weight: 700;
   color: var(--p-muted);
   letter-spacing: 0.8px;
@@ -112,7 +112,7 @@
 }
 
 .chip {
-  font-size: 11px;
+  font-size: var(--text-label);
   background: var(--p-light);
   border-radius: 3px;
   padding: 3px 8px;
@@ -133,13 +133,13 @@
 }
 
 .locationHq {
-  font-size: 12px;
+  font-size: var(--text-body-sm);
   font-weight: 600;
   color: var(--p-black);
 }
 
 .locationCoverage {
-  font-size: 11px;
+  font-size: var(--text-label);
   color: var(--p-muted);
 }
 

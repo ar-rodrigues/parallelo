@@ -1,5 +1,5 @@
 .section {
-  padding: var(--spacing-3xl) var(--spacing-xl);
+  padding: var(--spacing-3xl) var(--content-padding-x);
 }
 
 .container {

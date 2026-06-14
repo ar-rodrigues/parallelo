@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "../styles/variables.css";
+@import "../styles/large-screens.css";
 
 :root {
   --background: var(--color-background);
@@ -28,6 +29,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    min-width: var(--layout-min-width);
+  }
+
+  body {
+    min-width: var(--layout-min-width);
   }
 }
 
@@ -174,7 +180,7 @@ h4 {
     max-width: 100%;
     box-sizing: border-box;
     white-space: normal;
-    font-size: 11px;
+    font-size: var(--text-label);
     line-height: 1.35;
     padding: 12px 14px;
     letter-spacing: 0.02em;
@@ -187,7 +193,7 @@ h4 {
   .btn-primary,
   .btn-secondary,
   .btn-dark {
-    font-size: 10px;
+    font-size: var(--text-caption);
     padding: 11px 12px;
   }
 }

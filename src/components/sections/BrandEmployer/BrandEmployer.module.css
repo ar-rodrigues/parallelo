@@ -1,7 +1,7 @@
 .section {
   background: var(--p-black);
   color: var(--p-white);
-  padding: 0 var(--spacing-xl) var(--spacing-3xl);
+  padding: 0 var(--content-padding-x) var(--spacing-3xl);
 }
 
 .inner {
@@ -24,7 +24,7 @@
 }
 
 .body {
-  font-size: 13px;
+  font-size: var(--text-body);
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.7;
   margin: 0 0 16px;
@@ -32,7 +32,7 @@
 }
 
 .quote {
-  font-size: 13px;
+  font-size: var(--text-body);
   font-style: italic;
   color: rgba(255, 255, 255, 0.4);
   border-top: 0.5px solid rgba(255, 255, 255, 0.08);

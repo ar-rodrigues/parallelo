@@ -8,7 +8,7 @@
   max-width: var(--container-max-width);
   margin: 0 auto;
   width: 100%;
-  padding: 0 var(--spacing-xl);
+  padding: 0 var(--content-padding-x);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -19,7 +19,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 11px;
+  font-size: var(--text-label);
   color: var(--p-slate);
   background: var(--p-white);
   border: 0.5px solid var(--p-border);
@@ -40,7 +40,7 @@
 }
 
 .sep {
-  font-size: 11px;
+  font-size: var(--text-label);
   color: rgba(0, 0, 0, 0.18);
 }
 
@@ -63,7 +63,7 @@
   .item {
     justify-content: center;
     text-align: center;
-    font-size: 10px;
+    font-size: var(--text-caption);
     padding: 8px 10px;
     min-height: 2.75rem;
     border-radius: 16px;
@@ -74,11 +74,11 @@
   }
 
   .item[data-key="vda"] .itemLabel {
-    font-size: 9px;
+    font-size: var(--text-caption);
     letter-spacing: -0.02em;
   }
 
   .item[data-key="national"] .itemLabel {
-    font-size: 9px;
+    font-size: var(--text-caption);
   }
 }

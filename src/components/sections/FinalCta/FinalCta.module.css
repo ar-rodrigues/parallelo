@@ -33,7 +33,7 @@
 }
 
 .subtitle {
-  font-size: 13px;
+  font-size: var(--text-body);
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin: 0 auto 24px;
@@ -41,7 +41,7 @@
 
 .section :global(.btn-primary) {
   background: var(--p-black);
-  font-size: 14px;
+  font-size: var(--text-body-sm);
   padding: 13px 28px;
 }
 

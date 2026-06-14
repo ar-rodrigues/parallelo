@@ -58,9 +58,9 @@ export default function RootLayout({
     <html
       lang="es"
       data-scroll-behavior="smooth"
-      className={`${barlow.variable} ${barlowCondensed.variable} scrollbar-hidden h-full overflow-y-auto overflow-x-clip antialiased`}
+      className={`${barlow.variable} ${barlowCondensed.variable} scrollbar-hidden h-full overflow-y-auto overflow-x-auto antialiased`}
     >
-      <body className="scrollbar-hidden min-h-full flex flex-col overflow-x-clip">
+      <body className="scrollbar-hidden min-h-full flex flex-col overflow-x-auto">
         {children}
       </body>
     </html>

@@ -1,0 +1,27 @@
+/* Proportional scaling for large viewports */
+
+@media (min-width: 1440px) {
+  html {
+    font-size: calc(16px * var(--ui-scale));
+  }
+}
+
+@media (min-width: 1440px) {
+  #nosotros h2,
+  #impacto h2,
+  #equipo h2 {
+    font-size: calc(26px * var(--ui-scale));
+  }
+
+  #impacto blockquote {
+    font-size: var(--text-body-sm);
+  }
+
+  #servicios h3 {
+    font-size: calc(22px * var(--ui-scale));
+  }
+
+  #cobertura h3 {
+    font-size: var(--text-body);
+  }
+}

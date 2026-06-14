@@ -8,7 +8,7 @@
   max-width: var(--container-max-width);
   margin: 0 auto;
   width: 100%;
-  padding: 0 var(--spacing-xl);
+  padding: 0 var(--content-padding-x);
   display: flex;
   gap: 20px;
   align-items: center;
@@ -29,7 +29,7 @@
 }
 
 .subtitle {
-  font-size: 12px;
+  font-size: var(--text-body-sm);
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.5;
   margin: 0;
@@ -38,7 +38,7 @@
 .cta {
   white-space: nowrap;
   padding: 12px 24px;
-  font-size: 12px;
+  font-size: var(--text-body-sm);
 }
 
 @media (max-width: 640px) {

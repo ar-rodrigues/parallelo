@@ -34,14 +34,14 @@
 }
 
 .description {
-  font-size: 12px;
+  font-size: var(--text-body-sm);
   color: rgba(255, 255, 255, 0.35);
   line-height: 1.6;
   margin: 0 0 12px;
 }
 
 .tagline {
-  font-size: 11px;
+  font-size: var(--text-label);
   color: var(--p-green);
   font-style: italic;
   font-weight: 500;
@@ -49,7 +49,7 @@
 }
 
 .colTitle {
-  font-size: 11px;
+  font-size: var(--text-label);
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.8px;
@@ -71,7 +71,7 @@
 }
 
 .links a {
-  font-size: 11px;
+  font-size: var(--text-label);
   color: rgba(255, 255, 255, 0.35);
   text-decoration: none;
 }
@@ -81,7 +81,7 @@
 }
 
 .contactItem {
-  font-size: 11px;
+  font-size: var(--text-label);
   color: rgba(255, 255, 255, 0.35);
   margin: 0 0 4px;
 }
@@ -104,7 +104,7 @@
 }
 
 .legal {
-  font-size: 10px;
+  font-size: var(--text-caption);
   color: rgba(255, 255, 255, 0.2);
   margin: 0;
 }
@@ -131,7 +131,7 @@
 }
 
 .socialLink {
-  font-size: 11px;
+  font-size: var(--text-label);
   color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
   display: flex;
